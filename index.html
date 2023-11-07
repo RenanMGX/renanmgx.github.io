@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Geek University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Curriculum vitae Geek University" />
+    <meta name="keywords" content="curriculo, vitae, geek, university, git, github" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main-green.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body class="material-template">
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div id="page" class="page">
+      <!-- Header -->
+      <header id="site_header" class="header mobile-menu-hide">
+        <div class="header-content">
+          <div class="site-title-block mobile-hidden">
+            <a href="index.html#home"><div class="site-title">Desenvolvedor<span></span></div></a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="site-nav">
+            <!-- Main menu -->
+            <ul id="nav" class="site-main-menu">
+              <li>
+                <a class="pt-trigger" href="#home">Início</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#resume">Currículo</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#porti2">Portfólio</a>
+              </li>
+              <!-- <li>
+                <a class="pt-trigger" href="index.html#portfolio">Portfólio</a>
+              </li> -->
+            </ul>
+            <!-- /Main menu -->
+          </div>
+          <!-- Navigation -->
+        </div>
+      </header>
+      <!-- /Header -->
+
+      <!-- Mobile Header -->
+      <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+          <div class="mobile-site-title">Geek University</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- /Mobile Header -->
+
+      <!-- Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+          <!-- Subpages -->
+          <div class="subpages">
+
+            <!-- Home Subpage -->
+            <section class="pt-page" data-id="home">
+              <div class="section-inner start-page-content">
+                <div class="page-header">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <div class="photo">
+                        <img src="images/foto_perfil.jpg" alt="Renan_Brian">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <div class="title-block">
+                        <h1>Renan Brian</h1>
+                        <div class="owl-carousel text-rotation">
+                          <div class="item">
+                            <div class="sp-subtitle">Desenvolvedor Backend</div>
+                          </div>
+                          <div class="item">
+                            <div class="sp-subtitle">Desenvolvedor RPA</div>
+                          </div>
+                          <div class="item">
+                            <div class="sp-subtitle">Python</div>
+                          </div>
+                          <div class="item">
+                            <div class="sp-subtitle">C#</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="social-links">
+                        <a href="https://github.com/RenanMGX" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/renanmgx/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/RenanMGX/?locale=pt_BR" target="_blank" ><i class="fa fa-facebook"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="page-content">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="about-me">
+                        <div class="block-title">
+                          <h3>Quem <span>Sou?</span></h3>
+                        </div>
+                        <p>Olá, estou apresentando e compartilhando meu portfólio como programador. Com habilidades sólidas em Python e uma paixão pela criação de soluções de software inovadoras, estou entusiasmado em compartilhar meu trabalho e experiência profissional com você e sua equipe.
+                        </p>
+                      </div>
+                      <div class="download-resume">
+                        <a href="cv/Curriculo.pdf" class="btn btn-secondary" target="_blank">Download Curículo</a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <ul class="info-list">
+                        <li><span class="title" >Idade</span><span class="value" id="idade_auto">0</span></li>
+                        <li><span class="title">Nacionalidade</span><span class="value">Brasileiro</span></li>
+                        <li><span class="title">Cidade/Estado</span><span class="value">Belo Horizonte, MG</span></li>
+                        <li><span class="title">E-mail</span><span class="value">renanmgx@hotmail.com</span></li>
+                        <li><span class="title">Fone</span><span class="value">+55 31 99477-3182</span></li>
+                        <!-- <li><span class="title">Freelance</span><span class="value available">Indisponível</span></li> -->
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End of Home Subpage -->
+
+            <!-- Resume Subpage -->
+            <section class="pt-page" data-id="resume">
+              <div class="section-inner custom-page-content">
+                <div class="page-header color-1">
+                  <h2>Currículo</h2>
+                </div>
+                <div class="page-content">
+
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3>Educação</h3>
+                        </div>
+
+                        <div class="timeline">
+                          <!-- Education 1 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Ciência da Computação</h4>
+                            <span class="item-period">2021</span> - <span class="item-period">2025</span>
+                            <span class="item-small">Unip</span>
+                            <p class="item-description">Formação em Ciência da Computação, com ênfase em desenvolvimento de software e algoritmos. Conhecimentos avançados em linguagens de programação, como Java, Python e C#. Habilidade em desenvolver soluções de tecnologia da informação para atender às necessidades empresariais.</p>
+                          </div>
+                          <!-- / Education 1 -->
+
+                          <!-- Education 2 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Programação em Python do básico ao avançado</h4>
+                            <span class="item-period">Jul - 2023</span>
+                            <span class="item-small">Geek University</span>
+                          </div>
+
+                          <!-- / Education 3 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Git e Github Essencial para o Desenvolvedor</h4>
+                            <span class="item-period">Ago - 2023</span>
+                            <span class="item-small">Geek University</span>
+                          </div>
+
+                          <!-- / Education 4 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Criando Robôs com Python - Automatizando Processos</h4>
+                            <span class="item-period">Nov - 2023</span>
+                            <span class="item-small">Udemy</span>
+                          </div>
+
+                          <!-- / Education 5 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Power BI Completo - Do Básico ao Avançado</h4>
+                            <span class="item-period">Jul - 2023</span>
+                            <span class="item-small">Udemy</span>
+                          </div>
+
+                          <!-- / Education 6 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Abap para iniciantes - Curso Completo</h4>
+                            <span class="item-period">Out - 2022</span>
+                            <span class="item-small">Udemy</span>
+                          </div>
+
+                          <!-- / Education 7 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">PHP e MySQL Básico</h4>
+                            <span class="item-period">Fev - 2023</span>
+                            <span class="item-small">Udemy</span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3>Experiência Profissional</h3>
+                        </div>
+
+                        <div class="timeline">
+                          <!-- Experience 1 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Analista de TI</h4>
+                            <span class="item-period">Abr/2023 - Atualmente</span>
+                            <span class="item-small">Grupo Patrimar</span>
+                            <p class="item-description">Sou um Analista de TI apaixonado por automatizar processos com Python. Minhas habilidades abrangem o gerenciamento de sistemas, redes e suporte a usuários, tornando a infraestrutura de TI mais eficiente. Minha especialização em automação me permite economizar tempo e recursos, impulsionando o desempenho da organização e promovendo a inovação tecnológica.</p>
+                          </div>
+                          <!-- / Experience 1 -->
+
+                          <!-- Experience 2 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Assistente de TI</h4>
+                            <span class="item-period">Jun/2011 - Abr/2023</span>
+                            <span class="item-small">Grupo Patrimar</span>
+                            <p class="item-description">Gerenciamento de sistemas, redes e suporte a usuários, tornando a infraestrutura de TI mais eficiente.</p>
+                          </div>
+                          <!-- / Experience 2 -->
+
+                          <!-- Experience 3 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Auxiliar de TI</h4>
+                            <span class="item-period">Jul/2019 - Jun/2021</span>
+                            <span class="item-small">Ibhes/Facemg</span>
+                            <p class="item-description">Habilidade em realizar atividades técnicas relacionadas ao cargo de Tecnologia da Informação (TI).</p>
+                          </div>
+                          <!-- / Experience 3 -->
+
+                          <!-- Experience 4 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Auxiliar Administrativo</h4>
+                            <span class="item-period">Jul/2015 - Ago/2019</span>
+                            <span class="item-small">Ibhes/Facemg</span>
+                            <p class="item-description">Habilidade em auxiliar os professores para garantir o sucesso dos estudantes.</p>
+                          </div>
+                          <!-- / Experience 4 -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3>Linguagens <span>Skills</span></h3>
+                        </div>
+
+                        <div class="skills-info">
+                          <h4>Python</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-8"></div>
+                          </div>
+
+                          <h4>PHP</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-5"></div>
+                          </div>
+
+                          <h4>C#</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-2"></div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3 style="display: none;"> d<span> d</span></h3>
+                        </div><br><br><br>
+
+                        <div class="skills-info">
+                          <h4>Lua</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-03"></div>
+                          </div>
+
+                          <h4>HTML/CSS</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-05"></div>
+                          </div>
+
+                          <h4>javascript/Tipescript</h4>
+                          <div class="skill-container">
+                            <div class="skill-percentage skill-2"></div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Download Resume Button -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                      <div class="block">
+                        <div class="center download-resume">
+                          <a href="#" class="btn btn-secondary" target="_blank">Download Currículo</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Download Resume Button -->
+
+                </div>
+              </div>
+            </section>
+            <!-- End of Resume Subpage -->
+
+
+            <!-- Portifolio adaptado para Backend porti2 -->
+            <section class="pt-page" data-id="porti2">
+              <div class="section-inner custom-page-content">
+                <div class="page-header color-1">
+                  <h2>Portfólio</h2>
+                </div>
+                <div class="page-content">
+
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3>Projetos</h3>
+                        </div>
+
+                        <div class="timeline">
+                          <!-- Education 1 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Telemetria</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small"><a href="https://github.com/RenanMGX/inventario" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
+                            <p class="item-description">Este projeto tem a finalidade de coletar dados dos computadores na rede e enviá-los para um servidor que irá salvá-los em um arquivo .csv. Posteriormente, esses dados serão carregados em um Power BI para exibi-los em gráficos relativos aos computadores da rede.<br>
+                              Este projeto está dividido em 3 scripts:<br>
+                              1 - É executado no computador e a cada 5 minutos coleta os dados e os envia para o servidor usando um arquivo .json.<br>
+                              2 - É um script executado no servidor por meio de uma aplicação Flask que coleta os dados dos computadores e os salva em um arquivo .csv.<br>
+                              3 - É um script projetado para ser executado via GPO (Group Policy Object) que instala o 1º script na máquina do usuário, permitindo que ele inicie automaticamente junto com o Windows.                            
+                            </p>
+                          </div>
+                          <!-- / Education 1 -->
+
+                          <!-- Education 2 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">bot_whatsapp</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_whatsapp" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
+                            <p class="item-description">
+                              Este script lê uma planilha do Excel, salvando o número de telefone, mensagem e caminho de um arquivo.<br>
+                              Em seguida, o script dispara mensagens no WhatsApp de forma sequencial para todos os contatos salvos na planilha. No final, uma interface gráfica informa quais mensagens foram entregues.                            </p>
+                          </div>
+
+                          <!-- / Education 3 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">quebra_excel</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small" style="font-size: 125%;font-weight: bold ;color: gray;">Privado</span>
+                            <p class="item-description">
+                              Este script acessa uma planilha do Excel que contém vários dados misturados. O script separa os dados por setor e cria uma nova planilha com cada conjunto de dados separado. Utilizei multiprocess e criei uma fórmula que identifica todos os núcleos do computador e separa 90% deles para o script, permitindo o processamento de múltiplas planilhas ao mesmo tempo.<br>
+                              Anteriormente, esse processo era realizado manualmente uma vez por mês e levava cerca de um dia e meio, enquanto com o script, leva aproximadamente 20 minutos.                            </p>
+                          </div>
+
+                          <!-- / Education 4 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">bot_cotar_moeda</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_cotar_dolar" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
+                            <p class="item-description">
+                              Este script, usando o Selenium, acessa o site do Banco do Brasil e, a pedido do cliente, coleta o valor da cotação do dólar e do euro sempre do dia anterior. Ele salva esses dados em uma variável e, em seguida, abre o programa SAP para registrar a cotação das moedas em uma transação do SAP.<br>
+                              O script é executado todos os dias às 7:00 da manhã, e foram tratados os erros de forma a minimizar a necessidade de manutenção. Ele identifica quando não houve cotação no dia anterior e, se ficar sem internet ou se o site estiver fora do ar, ele faz uma pausa e tenta novamente algumas vezes, com intervalos de 30 minutos. Caso não consiga abrir o programa SAP ou salvar a transação, encerra suas atividades e fica pronto para a próxima execução. Todas as informações, incluindo problemas e acertos do script, são registradas em um arquivo de log                            </p>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="block">
+                        <div class="block-title">
+                          <h3></h3>
+                        </div>
+
+                        <div class="timeline">
+                          <!-- Experience 1 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">bot_instalador</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_instalador" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
+                            <p class="item-description">
+                              Este script abre uma interface gráfica listando alguns programas para instalar no computador. Os programas estão em uma pasta compartilhada na rede e são executados pelo script. Caso os programas não possam ser instalados com o parâmetro /Silent (silenciosamente), a automação do PyAutoGUI concluirá a instalação do software de forma autônoma.                            </p>
+                          </div>
+                          <!-- / Experience 1 -->
+
+                          <!-- Experience 2 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">alterar_assinatura</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small"><a href="https://github.com/RenanMGX/alterar_assinatura" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
+                            <p class="item-description">
+                              Este script é utilizado em uma GPO e é executado no computador toda vez que o Windows é iniciado. O script irá alterar a imagem da assinatura de e-mail do usuário.                            </p>
+                          </div>
+                          <!-- / Experience 2 -->
+
+                          <!-- Experience 3 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Alocação de Resultados</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small" style="font-size: 125%;font-weight: bold ;color: gray;">Privado</span>
+                            <p class="item-description">
+                              Este script é extenso, contendo mais de 800 linhas, e nem todos os detalhes podem ser revelados.<br>
+                              O script possui uma interface gráfica para orientação do usuário. Ele acessa várias planilhas do Excel, tratando e filtrando os dados, em seguida, os salva em arquivos JSON para serem carregados posteriormente como uma base de dados. O usuário importa outra planilha do Excel e, com base nos dados já salvos, aplica regras extensas de alocação de contas. Posteriormente, o script salva uma nova planilha com os dados tratados.<br>
+                              Este script ainda está em fase de teste, porém, está substituindo um processo manual que era realizado mensalmente e que costumava levar até 7 dias. Com o uso do script, o processo agora leva cerca de 20 minutos.
+                             </p>
+                          </div>
+                          <!-- / Experience 3 -->
+
+                          <!-- Experience 4 -->
+                          <div class="timeline-item">
+                            <h4 class="item-title">Bot_imobme</h4>
+                            <span class="item-period">Python</span>
+                            <span class="item-small" style="font-size: 125%;font-weight: bold ;color: gray;">Privado</span>
+                            <p class="item-description">
+                              Este script utiliza o Selenium para acessar o site do Imobme, realizar o login como um usuário e navegar até a opção de geração de relatórios. A geração de relatórios pode ser demorada, então o script aguarda a conclusão e, em seguida, salva o arquivo em uma pasta específica. O arquivo é salvo por padrão no formato Excel, mas, a pedido do usuário, o script o converte em um arquivo .csv separado por ";".<br>
+                              O script está aguardando aprovação para iniciar os testes no ambiente de produção.                            </p>
+                          </div>
+                          <!-- / Experience 4 -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </section>
+            <!-- End of Services Subpage -->
+
+
+            <!-- Portfolio Subpage -->
+            <section class="pt-page" data-id="portfolio">
+              <div class="section-inner custom-page-content">
+                <div class="page-header color-1">
+                  <h2>Portfólio</h2>
+                </div>
+                <div class="page-content">
+
+                  <!-- Portfolio Content -->
+                  <div class="portfolio-content">
+
+                    <!-- Portfolio filter -->
+                    <ul id="portfolio_filters" class="portfolio-filters">
+                      <li class="active">
+                        <a class="filter btn btn-sm btn-link active" data-group="all">Tudo</a>
+                      </li>
+                      <li>
+                        <a class="filter btn btn-sm btn-link" data-group="media">Web Design</a>
+                      </li>
+                      <li>
+                        <a class="filter btn btn-sm btn-link" data-group="illustration">SEO</a>
+                      </li>
+                      <li>
+                        <a class="filter btn btn-sm btn-link" data-group="video">Programação</a>
+                      </li>
+                    </ul>
+                    <!-- End of Portfolio filter -->
+
+                    <!-- Portfolio Grid -->
+                    <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                      <!-- Portfolio Item 1 -->
+                      <figure class="item" data-groups='["all", "media"]'>
+                        <a href="images/portfolio/full/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/1.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Media</small>
+                            <i class="fa fa-file-text-o"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 1 -->
+
+                      <!-- Portfolio Item 2 -->
+                      <figure class="item" data-groups='["all", "video"]'>
+                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Praesent Dolor Ex" class="lightbox mfp-iframe">
+                          <img src="images/portfolio/2.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Video</small>
+                            <i class="fa fa-video-camera"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 2 -->
+
+                      <!-- Portfolio Item 3 -->
+                      <figure class="item" data-groups='["all","illustration"]'>
+                        <a href="images/portfolio/full/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/3.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Illustration</small>
+                            <i class="fa fa-image"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 3 -->
+
+                      <!-- Portfolio Item 4 -->
+                      <figure class="item" data-groups='["all", "media"]'>
+                        <a href="images/portfolio/full/4.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/4.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Media</small>
+                            <i class="fa fa-file-text-o"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 4 -->
+
+                      <!-- Portfolio Item 5 -->
+                      <figure class="item" data-groups='["all", "illustration"]'>
+                        <a href="images/portfolio/full/5.jpg" class="lightbox" title="Aliquam Condimentum Magna Rhoncus">
+                          <img src="images/portfolio/5.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Illustration</small>
+                            <i class="fa fa-image"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 5 -->
+
+                      <!-- Portfolio Item 6 -->
+                      <figure class="item" data-groups='["all", "media"]'>
+                        <a href="images/portfolio/full/6.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/6.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Media</small>
+                            <i class="fa fa-file-text-o"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 6 -->
+
+                      <!-- Portfolio Item 7 -->
+                      <figure class="item" data-groups='["all", "video"]'>
+                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Nulla Facilisi" class="lightbox mfp-iframe">
+                          <img src="images/portfolio/7.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Video</small>
+                            <i class="fa fa-video-camera"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 7 -->
+
+                      <!-- Portfolio Item 8 -->
+                      <figure class="item" data-groups='["all",  "media"]'>
+                       <a href="images/portfolio/full/1.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/8.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Media</small>
+                            <i class="fa fa-file-text-o"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 8 -->
+
+                      <!-- Portfolio Item 9 -->
+                      <figure class="item" data-groups='["all","illustration"]'>
+                        <a href="images/portfolio/full/9.jpg" class="lightbox" title="Mauris Neque Dolor">
+                          <img src="images/portfolio/9.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Illustration</small>
+                            <i class="fa fa-image"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 9 -->
+
+                      <!-- Portfolio Item 10 -->
+                      <figure class="item" data-groups='["all", "video"]'>
+                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Donec Lectus Arcu" class="lightbox mfp-iframe">
+                          <img src="images/portfolio/10.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Video</small>
+                            <i class="fa fa-video-camera"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 10 -->
+
+                      <!-- Portfolio Item 11 -->
+                      <figure class="item" data-groups='["all","illustration"]'>
+                        <a href="images/portfolio/full/11.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/11.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Illustration</small>
+                            <i class="fa fa-image"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 11 -->
+
+                      <!-- Portfolio Item 12 -->
+                      <figure class="item" data-groups='["all","media"]'>
+                        <a href="images/portfolio/full/1.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                          <img src="images/portfolio/12.jpg" alt="">
+                          <div>
+                            <h5 class="name">Project Name</h5>
+                            <small>Media</small>
+                            <i class="fa fa-file-text-o"></i>
+                          </div>
+                        </a>
+                      </figure>
+                      <!-- /Portfolio Item 12 -->
+                    </div>
+                    <!-- /Portfolio Grid -->
+
+                  </div>
+                  <!-- /Portfolio Content -->
+                </div>
+              </div>
+            </section>
+            <!-- /Portfolio Subpage -->
+
+          </div>
+        </div>
+        <!-- /Page changer wrapper -->
+      </div>
+      <!-- /Main Content -->
+    </div>
+    <footer>
+      <div class="copyrights">&copy; Geek University</div>
+    </footer>
+    <script>
+    // Data específica
+    const dataEspecifica = new Date('1994-10-24');
+    // Data atual
+    const dataAtual = new Date();
+
+    // Calculando a diferença em anos
+    const diferencaEmAnos = dataAtual.getFullYear() - dataEspecifica.getFullYear();
+
+    document.getElementById("idade_auto").innerHTML = diferencaEmAnos;
+
+
+
+
+      </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/pages-switcher.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+    <script type="text/javascript" src="js/jquery.shuffle.min.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+    <script type="text/javascript" src="js/jquery.googlemap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
