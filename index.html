@@ -785,14 +785,21 @@
     </footer>
     <script>
     // Data específica
-    const dataEspecifica = new Date('1994-10-24');
-    // Data atual
-    const dataAtual = new Date();
+        function calcularIdade(dataNascimento) {
+            const hoje = new Date();
+            const nascimento = new Date(dataNascimento);
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+            const mes = hoje.getMonth() - nascimento.getMonth();
+            if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+                idade--;
+            }
+            return idade;
+        }
 
-    // Calculando a diferença em anos
-    const diferencaEmAnos = dataAtual.getFullYear() - dataEspecifica.getFullYear();
+        const dataNascimento = '1994-10-24'; // Substitua pela sua data de nascimento
+        const idade = calcularIdade(dataNascimento);
 
-    document.getElementById("idade_auto").innerHTML = diferencaEmAnos;
+        document.getElementById("idade_auto").innerHTML = idade;
 
 
 
