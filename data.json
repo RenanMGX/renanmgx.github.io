@@ -1,0 +1,157 @@
+{
+  "experience": [
+    {
+      "title": "Desenvolvedor Pleno",
+      "company": "Grupo Patrimar",
+      "period": "Mar/2026 — Presente",
+      "tags": ["Python", "RPA", "SAP", "Oracle", "FastAPI", "BotCity", "IA", "CI/CD", "Git"],
+      "description": "Atuo como Desenvolvedor Pleno, analisando demandas tecnicas e transformando requisitos em solucoes alinhadas as necessidades do negocio. Desenvolvo e mantenho aplicacoes, automacoes RPA e componentes de IA, realizando integracoes com sistemas corporativos como SAP, Oracle e outras plataformas. Participo da implementacao de funcionalidades considerando seguranca, desempenho, escalabilidade e disponibilidade. Realizo revisao de codigo, testes e documentacao, alem de apoiar processos de deploy, CI/CD e boas praticas de versionamento com Git.",
+      "highlights": [
+        "Integracao com SAP, Oracle e outras plataformas corporativas",
+        "Sustentacao de sistemas e resolucao de incidentes com autonomia",
+        "Apoio a desenvolvedores juniores e conducao de iniciativas internas",
+        "Melhorias preventivas, de observabilidade e de confiabilidade"
+      ]
+    },
+    {
+      "title": "Analista de TI Pleno",
+      "company": "Grupo Patrimar",
+      "period": "Fev/2024 — Mar/2026",
+      "tags": ["Python", "RPA", "Selenium", "FastAPI", "Pandas", "Power BI", "MySQL"],
+      "description": "Pioneiro na funcao de Desenvolvedor RPA na empresa, introduzi a automacao de processos antes mesmo de ocupar oficialmente o cargo, melhorando significativamente a eficiencia operacional. Especialista em Python para automacao, com profundo conhecimento em Selenium, Pandas, BeautifulSoup, PyAutoGUI, FastAPI, POO, JSON e MySQL. Integrante ativo da Squad de BI, contribuindo na criacao e implementacao de dashboards avancados para toda a empresa.",
+      "highlights": [
+        "Automacoes financeiras reduzindo tempo de processamento de dias para minutos",
+        "Integracao Oracle CRM API + Gemini AI para enriquecimento de dados de clientes",
+        "Agente IA local com RAG (Ollama) para consulta de documentos internos",
+        "+15 automacoes em execucao continua no servidor, orquestradas por scheduler proprio"
+      ]
+    },
+    {
+      "title": "Analista de TI Junior",
+      "company": "Grupo Patrimar",
+      "period": "Abr/2023 — Fev/2024",
+      "tags": ["Python", "RPA", "Automacao", "Power BI", "FastAPI"],
+      "description": "Pioneiro na funcao de Desenvolvedor RPA na empresa, introduzi a automacao de processos antes mesmo de ocupar oficialmente o cargo, melhorando significativamente a eficiencia operacional. Especialista em Python para automacao, com profundo conhecimento em Selenium, Pandas, PyAutoGUI, FastAPI e MySQL. Integrante ativo da Squad de BI na criacao de dashboards para apoio a tomada de decisao baseada em dados.",
+      "highlights": []
+    },
+    {
+      "title": "Assistente de TI",
+      "company": "Grupo Patrimar",
+      "period": "Jun/2021 — Abr/2023",
+      "tags": ["Suporte Tecnico", "Redes", "Office 365", "ZenDesk", "Telefonia IP"],
+      "description": "Suporte tecnico completo de infraestrutura: montagem e manutencao de computadores, instalacao e configuracao de redes e software, atendimento via ZenDesk, controle de licencas de software, suporte ao Office 365, telefones IP e analogicos. Garantia do funcionamento continuo e disponibilidade dos sistemas de TI.",
+      "highlights": []
+    },
+    {
+      "title": "Auxiliar de TI",
+      "company": "Ibhes / Facemg",
+      "period": "Jul/2019 — Jun/2021",
+      "tags": ["Suporte", "Hardware", "Redes", "Software"],
+      "description": "Atividades tecnicas de TI em instituicao de ensino: montagem e manutencao de computadores, instalacao e configuracao de redes e software. Realizacao de atividades relacionadas ao cargo de Tecnologia da Informacao.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ciencia da Computacao",
+      "institution": "Unip — Universidade Paulista",
+      "period": "Fev/2021 — Dez/2026",
+      "description": "Enfase em desenvolvimento de software, algoritmos e sistemas. Java, Python, C#, estruturas de dados e engenharia de software.",
+      "icon_class": "fas fa-graduation-cap"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Python do Basico ao Avancado",
+      "issuer": "Geek University / Udemy",
+      "date": "Jul 2023",
+      "url": "https://www.udemy.com/certificate/UC-7b095cd0-78c2-4661-a929-2f73faf9688c/",
+      "icon_class": "devicon-python-plain colored"
+    },
+    {
+      "name": "C# Completo — POO + Projetos",
+      "issuer": "Udemy",
+      "date": "Jan 2024",
+      "url": "https://www.udemy.com/certificate/UC-70395d2b-22e4-439c-aa37-b6dd9f2e4130/",
+      "icon_class": "devicon-csharp-plain colored"
+    },
+    {
+      "name": "Criando Robos com Python — RPA",
+      "issuer": "Udemy",
+      "date": "Nov 2023",
+      "url": "https://www.udemy.com/certificate/UC-4e03fd0b-038e-43ef-aeac-24eddd462a6a/",
+      "icon_class": "fas fa-robot accent"
+    },
+    {
+      "name": "Power BI Completo",
+      "issuer": "Udemy",
+      "date": "Jul 2023",
+      "url": "https://www.udemy.com/certificate/UC-16240bf9-6555-4aed-89dd-2ce043521dae/",
+      "icon_class": "fas fa-chart-bar",
+      "icon_style": "color:#f2a300"
+    },
+    {
+      "name": "Git & GitHub Essencial",
+      "issuer": "Geek University / Udemy",
+      "date": "Ago 2023",
+      "url": "https://www.udemy.com/certificate/UC-67c7e533-4fb3-4ab5-818a-2bee16b62352/",
+      "icon_class": "devicon-git-plain colored"
+    },
+    {
+      "name": "ABAP para Iniciantes",
+      "issuer": "Udemy",
+      "date": "Out 2022",
+      "url": "https://www.udemy.com/certificate/UC-51637d6d-d0a1-4d97-96f3-440df0a23636/",
+      "icon_class": "fas fa-database accent"
+    },
+    {
+      "name": "PHP e MySQL Basico",
+      "issuer": "Prime Cursos",
+      "date": "Fev 2023",
+      "url": "certificado/php_mysql_prime.pdf",
+      "icon_class": "devicon-php-plain colored"
+    },
+    {
+      "name": "Programacao Python",
+      "issuer": "Prime Cursos",
+      "date": "Fev 2023",
+      "url": "certificado/python_prime.pdf",
+      "icon_class": "devicon-python-plain colored"
+    },
+    {
+      "name": "Metodologia Agil",
+      "issuer": "Overdub",
+      "date": "Nov 2023",
+      "url": "https://onedrive.live.com/?authkey=%21ANAj3n%5FBAUb50Zo&cid=6ACF4AF69918493D&id=6ACF4AF69918493D%2163508&parId=6ACF4AF69918493D%2113444&o=OneUp",
+      "icon_class": "fas fa-project-diagram accent"
+    },
+    {
+      "name": "Logica de Programacao com JS",
+      "issuer": "Alura",
+      "date": "Jan 2023",
+      "url": "https://cursos.alura.com.br/certificate/renanmgx/logica-programacao-mergulhe-programacao-javascript",
+      "icon_class": "devicon-javascript-plain colored"
+    },
+    {
+      "name": "Logica: Funcoes e Listas",
+      "issuer": "Alura",
+      "date": "Jan 2023",
+      "url": "https://cursos.alura.com.br/certificate/9cd7df8c-8350-4496-be2d-2566510a74d5",
+      "icon_class": "devicon-javascript-plain colored"
+    },
+    {
+      "name": "Automacoes Inteligentes: Python e BotCity",
+      "issuer": "Udemy",
+      "date": "2024",
+      "url": "",
+      "icon_class": "fas fa-robot accent"
+    },
+    {
+      "name": "Padroes de Projeto (Design Patterns) com Python",
+      "issuer": "Udemy",
+      "date": "2024",
+      "url": "",
+      "icon_class": "devicon-python-plain colored"
+    }
+  ]
+}

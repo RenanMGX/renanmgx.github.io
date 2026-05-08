@@ -1,820 +1,426 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Renan Oliveira</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Curriculum vitae Renan Oliveira" />
-    <meta name="keywords" content="curriculo, vitae, git, github" />
-    <link rel="shortcut icon" href="favicon.ico">
+﻿<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renan Oliveira — Desenvolvedor Pleno | RPA | Python | AI</title>
+  <meta name="description" content="Portfolio de Renan Oliveira — Desenvolvedor Pleno especialista em Python, RPA, IA e dados. Automacao SAP, FastAPI, BotCity e IA generativa. Belo Horizonte, MG." />
+  <meta name="keywords" content="Renan Oliveira, desenvolvedor Python, RPA, automacao SAP, FastAPI, BotCity, Ollama, Gemini AI, Belo Horizonte" />
+  <meta name="author" content="Renan Oliveira" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Renan Oliveira — Desenvolvedor Pleno | RPA | Python | AI" />
+  <meta property="og:description" content="Desenvolvedor Pleno no Grupo Patrimar. Especialista em Python, RPA, IA e dados: automacao SAP, FastAPI, BotCity e Gemini AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://renanmgx.github.io/" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main-green.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-  </head>
-
-  <body class="material-template">
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="preloader-spinner">
-        </div>
-      </div>
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navegacao principal">
+  <div class="nav-container">
+    <a href="#inicio" class="nav-logo" aria-label="Renan Oliveira — Inicio">
+      <span class="logo-initials" aria-hidden="true">RO</span>
+      <span class="logo-text">Renan Oliveira</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio"      class="nav-link active">Inicio</a></li>
+      <li><a href="#sobre"       class="nav-link">Sobre</a></li>
+      <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+      <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+      <li><a href="#projetos"    class="nav-link">Projetos</a></li>
+      <li><a href="#formacao"    class="nav-link">Formacao</a></li>
+      <li><a href="#contato"     class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <!-- /Loading animation -->
+  </div>
+</nav>
 
-    <div id="page" class="page">
-      <!-- Header -->
-      <header id="site_header" class="header mobile-menu-hide">
-        <div class="header-content">
-          <div class="site-title-block mobile-hidden">
-            <!-- <a href="index.html#home"><div class="site-title">Apresentação<span></span></div></a> -->
-          </div>
-
-          <!-- Navigation -->
-          <div class="site-nav">
-            <!-- Main menu -->
-            <ul id="nav" class="site-main-menu">
-              <li>
-                <a class="pt-trigger" href="#home">Início</a>
-              </li>
-              <li>
-                <a class="pt-trigger" href="#resume">Currículo</a>
-              </li>
-              <li>
-                <a class="pt-trigger" href="#porti2">Portfólio</a>
-              </li>
-              <!-- <li>
-                <a class="pt-trigger" href="index.html#portfolio">Portfólio</a>
-              </li> -->
-            </ul>
-            <!-- /Main menu -->
-          </div>
-          <!-- Navigation -->
-        </div>
-      </header>
-      <!-- /Header -->
-
-      <!-- Mobile Header -->
-      <div class="mobile-header mobile-visible">
-        <div class="mobile-logo-container">
-          <div class="mobile-site-title">Renan Oliveira</div>
-        </div>
-
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
+<section id="inicio" class="hero-section" aria-label="Apresentacao">
+  <div class="hero-bg-grid" aria-hidden="true"></div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Disponivel para novas oportunidades
+      </div>
+      <h1 class="hero-name">Renan <span class="accent">Oliveira</span></h1>
+      <div class="hero-subtitle" aria-live="polite">
+        <span id="typewriter"></span>
+        <span class="cursor-blink" aria-hidden="true">|</span>
+      </div>
+      <p class="hero-bio">
+        Desenvolvedor Pleno no <strong>Grupo Patrimar</strong> com foco em automacao inteligente.
+        Desenvolvo solucoes em Python para RPA, APIs e IA que eliminam processos manuais,
+        integram sistemas corporativos e escalam operacoes empresariais.
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary"><i class="fas fa-code" aria-hidden="true"></i> Ver Projetos</a>
+        <a href="#contato"  class="btn btn-outline"><i class="fas fa-envelope" aria-hidden="true"></i> Contato</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/RenanMGX" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/renanmgx/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/RenanMGX/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:renanmgx@hotmail.com" class="social-link" aria-label="E-mail">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
-      <!-- /Mobile Header -->
-
-      <!-- Main Content -->
-      <div id="main" class="site-main">
-        <!-- Page changer wrapper -->
-        <div class="pt-wrapper">
-          <!-- Subpages -->
-          <div class="subpages">
-
-            <!-- Home Subpage -->
-            <section class="pt-page" data-id="home">
-              <div class="section-inner start-page-content">
-                <div class="page-header">
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                      <div class="photo">
-                        <img src="images/foto_perfil.jpg" alt="Renan_Brian">
-                      </div>
-                    </div>
-
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                      <div class="title-block">
-                        <h1>Renan Oliveira</h1>
-                        <div class="owl-carousel text-rotation">
-                          <div class="item">
-                            <div class="sp-subtitle">Desenvolvedor Backend</div>
-                          </div>
-                          <div class="item">
-                            <div class="sp-subtitle">Desenvolvedor RPA</div>
-                          </div>
-                          <div class="item">
-                            <div class="sp-subtitle">Python / C#</div>
-                          </div>
-                          <div class="item">
-                            <div class="sp-subtitle">PHP/MySQL</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="social-links">
-                        <a href="https://github.com/RenanMGX" target="_blank"><i class="fa fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/renanmgx/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/RenanMGX/?locale=pt_BR" target="_blank" ><i class="fa fa-facebook"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="page-content">
-                  <div class="row">
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="about-me">
-                        <div class="block-title">
-                          <h3>Quem <span>Sou?</span></h3>
-                        </div>
-                        <p>Sou um apaixonado desenvolvedor com sólida experiência em Python, C#, API e RPA, destacando-me por liderar projetos desafiadores como desenvolvedor RPA no Grupo Patrimar. Minhas habilidades incluem a criação e integração de APIs, otimizando a eficiência operacional. Especializado em RPA, implementei automações financeiras, reduzindo erros e tempos de processamento. Minha abordagem é marcada pela constante curiosidade, evidenciada em projetos de automatização e desenvolvimento de APIs personalizadas. Comprometido com prazos, priorizo eficiência sem comprometer a qualidade do código, buscando enfrentar desafios e contribuir para projetos inovadores. Pronto para colaborar em empolgantes iniciativas que impulsionem o desenvolvimento tecnológico.<br>
-                        </p>
-                      </div>
-                      <!-- <div class="download-resume">
-                        <a href="cv/Curriculo.pdf" class="btn btn-secondary" target="_blank">Download Curículo</a>
-                      </div> -->
-                    </div>
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <ul class="info-list">
-                        <li><span class="title" >Idade</span><span class="value" id="idade_auto">0</span></li>
-                        <li><span class="title">Nacionalidade</span><span class="value">Brasileiro</span></li>
-                        <li><span class="title">Cidade/Estado</span><span class="value">Belo Horizonte, MG</span></li>
-                        <!-- <li><span class="title">E-mail</span><span class="value"></span></li>
-                        <li><span class="title">Telefone</span><span class="value"></span></li> -->
-                        <!-- <li><span class="title">Freelance</span><span class="value available">Indisponível</span></li> -->
-                      </ul>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- End of Home Subpage -->
-
-            <!-- Resume Subpage -->
-            <section class="pt-page" data-id="resume">
-              <div class="section-inner custom-page-content">
-                <div class="page-header color-1">
-                  <h2>Currículo</h2>
-                </div>
-                <div class="page-content">
-
-                  <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3>Educação</h3>
-                        </div>
-
-                        <div class="timeline">
-                          <!-- Education 1 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Ciência da Computação</h4>
-                            <span class="item-period">2021</span> - <span class="item-period">2025</span>
-                            <span class="item-small">Unip</span>
-                            <p class="item-description">Formação em Ciência da Computação, com ênfase em desenvolvimento de software e algoritmos. Conhecimentos avançados em linguagens de programação, como Java, Python e C#. Habilidade em desenvolver soluções de tecnologia da informação para atender às necessidades empresariais.</p>
-                          </div>
-                          <!-- / Education 1 -->
-
-
-                          <!-- Education 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Programação em Python do básico ao avançado</h4>
-                            <span class="item-period">Jul - 2023</span>
-                            <span class="item-small">Geek University</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-7b095cd0-78c2-4661-a929-2f73faf9688c/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- Education 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">C# COMPLETO Programação Orientada a Objetos + Projetos</h4>
-                            <span class="item-period">Jan - 2024</span>
-                            <span class="item-small">Udemy</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-70395d2b-22e4-439c-aa37-b6dd9f2e4130/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Git e Github Essencial para o Desenvolvedor</h4>
-                            <span class="item-period">Ago - 2023</span>
-                            <span class="item-small">Geek University</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-67c7e533-4fb3-4ab5-818a-2bee16b62352/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 4 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Criando Robôs com Python - Automatizando Processos</h4>
-                            <span class="item-period">Nov - 2023</span>
-                            <span class="item-small">Udemy</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-4e03fd0b-038e-43ef-aeac-24eddd462a6a/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 5 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Power BI Completo - Do Básico ao Avançado</h4>
-                            <span class="item-period">Jul - 2023</span>
-                            <span class="item-small">Udemy</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-16240bf9-6555-4aed-89dd-2ce043521dae/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 6 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Abap para iniciantes - Curso Completo</h4>
-                            <span class="item-period">Out - 2022</span>
-                            <span class="item-small">Udemy</span>
-                            <p class="item-description" ><a href="https://www.udemy.com/certificate/UC-51637d6d-d0a1-4d97-96f3-440df0a23636/" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 7 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">PHP e MySQL Básico</h4>
-                            <span class="item-period">Fev - 2023</span>
-                            <span class="item-small">Prime Cursos</span>
-                            <p class="item-description" ><a href="certificado/php_mysql_prime.pdf" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 8 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Programação Python</h4>
-                            <span class="item-period">Fev - 2023</span>
-                            <span class="item-small">Prime Cursos</span>
-                            <p class="item-description" ><a href="certificado/python_prime.pdf" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 8 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Metodologia Agil</h4>
-                            <span class="item-period">Nov - 2023</span>
-                            <span class="item-small">Overdub</span>
-                            <p class="item-description" ><a href="https://onedrive.live.com/?authkey=%21ANAj3n%5FBAUb50Zo&cid=6ACF4AF69918493D&id=6ACF4AF69918493D%2163508&parId=6ACF4AF69918493D%2113444&o=OneUp" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-                          
-                          <!-- / Education 8 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Lógica de programação: mergulhe em programação com JavaScript</h4>
-                            <span class="item-period">Jan - 2023</span>
-                            <span class="item-small">Alura</span>
-                            <p class="item-description" ><a href="https://cursos.alura.com.br/certificate/renanmgx/logica-programacao-mergulhe-programacao-javascript" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-                          <!-- / Education 8 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Lógica de programação: explore funções e listas</h4>
-                            <span class="item-period">Jan - 2023</span>
-                            <span class="item-small">Alura</span>
-                            <p class="item-description" ><a href="https://cursos.alura.com.br/certificate/9cd7df8c-8350-4496-be2d-2566510a74d5" target="_blank" style="font-weight: bold;text-decoration: underline;">Certificado</a></p>
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3>Experiência Profissional</h3>
-                        </div>
-
-                        <div class="timeline">
-                          <!-- Experience 1 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Analista de TI</h4>
-                            <span class="item-period">Abr/2023 - Atualmente</span>
-                            <span class="item-small">Grupo Patrimar</span>
-                            <p class="item-description">Sou um Analista de TI apaixonado por automatizar processos com Python. Minhas habilidades abrangem o gerenciamento de sistemas, redes e suporte a usuários, tornando a infraestrutura de TI mais eficiente. Minha especialização em automação me permite economizar tempo e recursos, impulsionando o desempenho da organização e promovendo a inovação tecnológica.</p>
-                          </div>
-                          <!-- / Experience 1 -->
-
-                          <!-- Experience 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Assistente de TI</h4>
-                            <span class="item-period">Jun/2011 - Abr/2023</span>
-                            <span class="item-small">Grupo Patrimar</span>
-                            <p class="item-description">Experiência em montagem e manutenção de computadores, instalação e configuração de redes, instalação e configuração de software, atendimento ao usuário mediante ao ZenDesk, controle de licenças de software para os usuários, suporte ao Office 365, suporta a telefones IP e analógicos e outras atividades relacionadas ao cargo de Tecnologia da Informação. Conhecimento em garantir que os sistemas de TI estejam sempre em perfeito funcionamento e disponíveis para os usuários.</p>
-                          </div>
-                          <!-- / Experience 2 -->
-
-                          <!-- Experience 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Auxiliar de TI</h4>
-                            <span class="item-period">Jul/2019 - Jun/2021</span>
-                            <span class="item-small">Ibhes/Facemg</span>
-                            <p class="item-description">Experiência em montagem e manutenção de computadores, além de instalação e configuração de redes e software. Habilidade em realizar atividades técnicas relacionadas ao cargo de Tecnologia da Informação (TI).</p>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3>Linguagens <span>Skills</span></h3>
-                        </div>
-
-                        <div class="skills-info">
-                          <h4>Python</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-8"></div>
-                          </div>
-
-                          <h4>PHP</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-5"></div>
-                          </div>
-
-                          <h4>C#</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-2"></div>
-                          </div>
-
-                          <h4>MySQL</h4>
-                        <div class="skill-container">
-                          <div class="skill-percentage skill-2"></div>
-                        </div>
-                      </div>
-
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3 style="display: none;"> d<span> d</span></h3>
-                        </div><br><br><br>
-
-                        <div class="skills-info">
-                          <h4>Lua</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-03"></div>
-                          </div>
-
-                          <h4>HTML/CSS</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-05"></div>
-                          </div>
-
-                          <h4>javascript/tipescript</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-2"></div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div> -->
-
-                  <!-- Download Resume Button -->
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                      <div class="block">
-                        <!-- <div class="center download-resume">
-                          <a href="#" class="btn btn-secondary" target="_blank">Download Currículo</a>
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End of Download Resume Button -->
-
-                </div>
-              </div>
-            </section>
-            <!-- End of Resume Subpage -->
-
-
-            <!-- Portifolio adaptado para Backend porti2 -->
-            <section class="pt-page" data-id="porti2">
-              <div class="section-inner custom-page-content">
-                <div class="page-header color-1">
-                  <h2>Projetos</h2>
-                </div>
-                <div class="page-content">
-
-                  <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          
-                        </div>
-
-                        <div class="timeline">
-
-                          <!-- Education 1 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Automatização de Indices</h4>
-                            <span class="item-period">Python | RPA | API | Web Scraping | PowerBI</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/Automation_Indices" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este programa faz parte de um sistema de automação financeira projetado para gerenciar, verificar e atualizar índices financeiros e setoriais relacionados ao mercado imobiliário. Utiliza diversas bibliotecas Python para manipulação de dados, interações web, e operações de arquivo, visando automatizar tarefas repetitivas e melhorar a eficiência de processos financeiros.                         
-                            </p>
-                          </div>
-                          <!-- / Education 1 -->
-
-                            <!-- Education 08/04/2024 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Gerador de Incorridos</h4>
-                            <span class="item-period">Python | RPA | PowerBI</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/gerador_incorridos" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              O programa analisado é composto por quatro arquivos principais: gerador_incorridos.py, CJI3.py, FilesManipulation.py e credenciais.py, trabalhando em conjunto para automatizar a geração de relatórios de incorridos a partir de dados extraídos do SAP e outras fontes.<br>
-                              O programa executa um fluxo automatizado que abrange a conexão com o SAP, extração de dados de empreendimentos, geração de relatórios detalhados de incorridos, manipulação e análise desses dados em planilhas Excel, e finalmente, a geração de relatórios consolidados com informações atualizadas, incluindo índices financeiros externos como o INCC.
-                            </p>
-                          </div>
-                          <!-- / Education 08/04/2024 -->                        
-
-                          
-                          <!-- Education 1 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Telemetria</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/inventario" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">Este projeto tem a finalidade de coletar dados dos computadores na rede e enviá-los para um servidor que irá salvá-los em um arquivo .csv. Posteriormente, esses dados serão carregados em um Power BI para exibi-los em gráficos relativos aos computadores da rede.<br>
-                              Este projeto está dividido em 3 scripts:<br>
-                              1 - É executado no computador e a cada 5 minutos coleta os dados e os envia para o servidor usando um arquivo .json.<br>
-                              2 - É um script executado no servidor por meio de uma aplicação Flask que coleta os dados dos computadores e os salva em um arquivo .csv.<br>
-                              3 - É um script projetado para ser executado via GPO (Group Policy Object) que instala o 1º script na máquina do usuário, permitindo que ele inicie automaticamente junto com o Windows.                            
-                            </p>
-                          </div>
-                          <!-- / Education 1 -->
-
-                          <!-- Education 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">bot_whatsapp</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_whatsapp" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script lê uma planilha do Excel, salvando o número de telefone, mensagem e caminho de um arquivo.<br>
-                              Em seguida, o script dispara mensagens no WhatsApp de forma sequencial para todos os contatos salvos na planilha. No final, uma interface gráfica informa quais mensagens foram entregues.                            </p>
-                          </div>
-
-                          <!-- / Education 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">quebra_excel</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small" style="font-size: 125%;font-weight: bold ;color: gray;">Privado</span>
-                            <p class="item-description">
-                              Este script acessa uma planilha do Excel que contém vários dados misturados. O script separa os dados por setor e cria uma nova planilha com cada conjunto de dados separado. Utilizei multiprocess e criei uma fórmula que identifica todos os núcleos do computador e separa 90% deles para o script, permitindo o processamento de múltiplas planilhas ao mesmo tempo.<br>
-                              Anteriormente, esse processo era realizado manualmente uma vez por mês e levava cerca de um dia e meio, enquanto com o script, leva aproximadamente 20 minutos.                            </p>
-                          </div>
-
-                          <!-- / Education 4 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">bot_cotar_moeda</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_cotar_dolar" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script, usando o Selenium, acessa o site do Banco do Brasil e, a pedido do cliente, coleta o valor da cotação do dólar e do euro sempre do dia anterior. Ele salva esses dados em uma variável e, em seguida, abre o programa SAP para registrar a cotação das moedas em uma transação do SAP.<br>
-                              O script é executado todos os dias às 7:00 da manhã, e foram tratados os erros de forma a minimizar a necessidade de manutenção. Ele identifica quando não houve cotação no dia anterior e, se ficar sem internet ou se o site estiver fora do ar, ele faz uma pausa e tenta novamente algumas vezes, com intervalos de 30 minutos. Caso não consiga abrir o programa SAP ou salvar a transação, encerra suas atividades e fica pronto para a próxima execução. Todas as informações, incluindo problemas e acertos do script, são registradas em um arquivo de log                            </p>
-                          </div>
-
-                          <!-- / Education 4 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Mini Orquestrador python</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/agendador" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script atua como um pequeno orquestrador, permitindo-me agendar a execução dos meus scripts de maneira autônoma no servidor. Ele gera registros (logs) para que eu possa acompanhar se tudo transcorreu de maneira perfeita ou se houve algum erro.                            </p>
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3></h3>
-                        </div>
-
-                        <div class="timeline">
-
-                          <!-- Experience 1 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Imobme Extraction</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_imobme_extraction" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script de RPA simula a interação de um usuário no site do "imobme". Ele realiza o login e solicita a geração dos relatórios previamente definidos no próprio script. Em seguida, efetua o download dos relatórios no formato .xlsx para uma pasta predefinida. Posteriormente, converte os arquivos para os formatos .json ou .csv e os armazena em um local determinado, seja em uma pasta no servidor local ou utilizando o protocolo SFTP.                            </p>
-                          </div>
-                          <!-- / Experience 1 -->
-
-                          <!-- Experience 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">PatrimarAPI - Desenvolvimento</h4>
-                            <span class="item-period">Python | FastAPI</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/PatrimarAPI" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Esta é uma API em desenvolvimento, dividida em 3 scripts:<br>
-                              1 - Acessa o site do Imobme, faz login como um usuário, gera alguns relatórios previamente especificados e os salva como arquivos .xlsx em uma pasta escolhida.<br>
-                              2 - Lê todos os arquivos .xlsx na pasta e os converte em arquivos .json, salvando-os na pasta 'dados'.<br>
-                              3 - Por último, a API recebe a requisição via protocolo HTTP e retorna os dados salvos no formato JSON.
-                            </p>
-                          </div>
-                          <!-- / Experience 2 -->
-
-                          <!-- Experience 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Transferencia de Custos</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/transferencia-de-custo" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script lê vários arquivos em uma pasta, extrai algumas informações deles e, em seguida, aplica algumas regras aos dados. Posteriormente, os dados são salvos em uma planilha única para serem lidos pelo programa SAP. 
-                            </p>
-                          </div>
-                          <!-- / Experience 3 -->
-
-                          <!-- Experience 4 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">bot_instalador</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/bot_instalador" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script abre uma interface gráfica listando alguns programas para instalar no computador. Os programas estão em uma pasta compartilhada na rede e são executados pelo script. Caso os programas não possam ser instalados com o parâmetro /Silent (silenciosamente), a automação do PyAutoGUI concluirá a instalação do software de forma autônoma.                            </p>
-                          </div>
-                          <!-- / Experience 4-->
-
-                          <!-- Experience 5 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">alterar_assinatura</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small"><a href="https://github.com/RenanMGX/alterar_assinatura" target="_blank" style="font-size: 125%;text-decoration: underline;color: blue;">Repositorio Git</a></span>
-                            <p class="item-description">
-                              Este script é utilizado em uma GPO e é executado no computador toda vez que o Windows é iniciado. O script irá alterar a imagem da assinatura de e-mail do usuário.                            </p>
-                          </div>
-                          <!-- / Experience 5 -->
-
-                          <!-- Experience 6 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Alocação de Resultados</h4>
-                            <span class="item-period">Python</span>
-                            <span class="item-small" style="font-size: 125%;font-weight: bold ;color: gray;">Privado</span>
-                            <p class="item-description">
-                              Este script é extenso, contendo mais de 800 linhas, e nem todos os detalhes podem ser revelados.<br>
-                              O script possui uma interface gráfica para orientação do usuário. Ele acessa várias planilhas do Excel, tratando e filtrando os dados, em seguida, os salva em arquivos JSON para serem carregados posteriormente como uma base de dados. O usuário importa outra planilha do Excel e, com base nos dados já salvos, aplica regras extensas de alocação de contas. Posteriormente, o script salva uma nova planilha com os dados tratados.<br>
-                              Este script ainda está em fase de teste, porém, está substituindo um processo manual que era realizado mensalmente e que costumava levar até 7 dias. Com o uso do script, o processo agora leva cerca de 20 minutos.
-                             </p>
-                          </div>
-                          <!-- / Experience 6 -->
-
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-            </section>
-            <!-- End of Services Subpage -->
-
-
-            <!-- Portfolio Subpage -->
-            <section class="pt-page" data-id="portfolio">
-              <div class="section-inner custom-page-content">
-                <div class="page-header color-1">
-                  <h2>Portfólio</h2>
-                </div>
-                <div class="page-content">
-
-                  <!-- Portfolio Content -->
-                  <div class="portfolio-content">
-
-                    <!-- Portfolio filter -->
-                    <ul id="portfolio_filters" class="portfolio-filters">
-                      <li class="active">
-                        <a class="filter btn btn-sm btn-link active" data-group="all">Tudo</a>
-                      </li>
-                      <li>
-                        <a class="filter btn btn-sm btn-link" data-group="media">Web Design</a>
-                      </li>
-                      <li>
-                        <a class="filter btn btn-sm btn-link" data-group="illustration">SEO</a>
-                      </li>
-                      <li>
-                        <a class="filter btn btn-sm btn-link" data-group="video">Programação</a>
-                      </li>
-                    </ul>
-                    <!-- End of Portfolio filter -->
-
-                    <!-- Portfolio Grid -->
-                    <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
-
-                      <!-- Portfolio Item 1 -->
-                      <figure class="item" data-groups='["all", "media"]'>
-                        <a href="images/portfolio/full/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/1.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Media</small>
-                            <i class="fa fa-file-text-o"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 1 -->
-
-                      <!-- Portfolio Item 2 -->
-                      <figure class="item" data-groups='["all", "video"]'>
-                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Praesent Dolor Ex" class="lightbox mfp-iframe">
-                          <img src="images/portfolio/2.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Video</small>
-                            <i class="fa fa-video-camera"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 2 -->
-
-                      <!-- Portfolio Item 3 -->
-                      <figure class="item" data-groups='["all","illustration"]'>
-                        <a href="images/portfolio/full/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/3.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Illustration</small>
-                            <i class="fa fa-image"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 3 -->
-
-                      <!-- Portfolio Item 4 -->
-                      <figure class="item" data-groups='["all", "media"]'>
-                        <a href="images/portfolio/full/4.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/4.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Media</small>
-                            <i class="fa fa-file-text-o"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 4 -->
-
-                      <!-- Portfolio Item 5 -->
-                      <figure class="item" data-groups='["all", "illustration"]'>
-                        <a href="images/portfolio/full/5.jpg" class="lightbox" title="Aliquam Condimentum Magna Rhoncus">
-                          <img src="images/portfolio/5.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Illustration</small>
-                            <i class="fa fa-image"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 5 -->
-
-                      <!-- Portfolio Item 6 -->
-                      <figure class="item" data-groups='["all", "media"]'>
-                        <a href="images/portfolio/full/6.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/6.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Media</small>
-                            <i class="fa fa-file-text-o"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 6 -->
-
-                      <!-- Portfolio Item 7 -->
-                      <figure class="item" data-groups='["all", "video"]'>
-                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Nulla Facilisi" class="lightbox mfp-iframe">
-                          <img src="images/portfolio/7.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Video</small>
-                            <i class="fa fa-video-camera"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 7 -->
-
-                      <!-- Portfolio Item 8 -->
-                      <figure class="item" data-groups='["all",  "media"]'>
-                       <a href="images/portfolio/full/1.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/8.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Media</small>
-                            <i class="fa fa-file-text-o"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 8 -->
-
-                      <!-- Portfolio Item 9 -->
-                      <figure class="item" data-groups='["all","illustration"]'>
-                        <a href="images/portfolio/full/9.jpg" class="lightbox" title="Mauris Neque Dolor">
-                          <img src="images/portfolio/9.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Illustration</small>
-                            <i class="fa fa-image"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 9 -->
-
-                      <!-- Portfolio Item 10 -->
-                      <figure class="item" data-groups='["all", "video"]'>
-                        <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Donec Lectus Arcu" class="lightbox mfp-iframe">
-                          <img src="images/portfolio/10.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Video</small>
-                            <i class="fa fa-video-camera"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 10 -->
-
-                      <!-- Portfolio Item 11 -->
-                      <figure class="item" data-groups='["all","illustration"]'>
-                        <a href="images/portfolio/full/11.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/11.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Illustration</small>
-                            <i class="fa fa-image"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 11 -->
-
-                      <!-- Portfolio Item 12 -->
-                      <figure class="item" data-groups='["all","media"]'>
-                        <a href="images/portfolio/full/1.jpg" class="lightbox" title="Duis Eu Eros Viverra">
-                          <img src="images/portfolio/12.jpg" alt="">
-                          <div>
-                            <h5 class="name">Project Name</h5>
-                            <small>Media</small>
-                            <i class="fa fa-file-text-o"></i>
-                          </div>
-                        </a>
-                      </figure>
-                      <!-- /Portfolio Item 12 -->
-                    </div>
-                    <!-- /Portfolio Grid -->
-
-                  </div>
-                  <!-- /Portfolio Content -->
-                </div>
-              </div>
-            </section>
-            <!-- /Portfolio Subpage -->
-
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-wrapper" aria-hidden="true">
+        <div class="photo-ring"></div>
+        <img id="heroPhoto" src="https://avatars.githubusercontent.com/u/54701813?v=4" alt="Foto de Renan Oliveira" class="hero-photo" loading="eager" onerror="this.style.display='none'" />
+      </div>
+      <div class="hero-stats" aria-label="Estatisticas rapidas">
+        <div class="stat-card">
+          <span class="stat-number" id="statRepos">56</span>
+          <span class="stat-label">Repositorios</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">652</span>
+          <span class="stat-label">Contrib./ano</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Anos dev</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">7+</span>
+          <span class="stat-label">Anos em TI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <a href="#sobre" class="scroll-hint" tabindex="-1"><i class="fas fa-chevron-down"></i></a>
+  </div>
+</section>
+
+<section id="sobre" class="section" aria-label="Sobre mim">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Sobre <span class="accent">Mim</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>Sou um desenvolvedor apaixonado por automacao inteligente, com solida experiencia em
+          <strong>Python, RPA, IA e APIs</strong>. Atuo como Desenvolvedor Pleno no
+          <strong>Grupo Patrimar</strong>, desenvolvendo solucoes que eliminam processos manuais,
+          integram sistemas corporativos e geram ganho real de eficiencia.</p>
+        <p>Especializado em integracao com <strong>SAP</strong>, desenvolvimento de
+          <strong>APIs com FastAPI</strong> e automacao com <strong>BotCity</strong>.
+          Venho explorando ativamente <strong>IA generativa</strong> — construindo agentes
+          conversacionais com RAG usando Ollama local e integrando o Gemini AI em pipelines
+          de processamento de dados.</p>
+        <p>Formando em Ciencia da Computacao pela Unip (2021–2026), tenho como base uma
+          mentalidade orientada a resultados: codigo limpo, manutivel e com impacto real nos negocios.</p>
+        <ul class="about-info">
+          <li><i class="fas fa-map-marker-alt accent" aria-hidden="true"></i><span>Belo Horizonte, MG — Brasil</span></li>
+          <li><i class="fas fa-birthday-cake accent" aria-hidden="true"></i><span><span class="idade-auto">31</span> anos</span></li>
+          <li><i class="fas fa-building accent" aria-hidden="true"></i><span>Patrimar Engenharia</span></li>
+          <li><i class="fas fa-envelope accent" aria-hidden="true"></i><a href="mailto:renanmgx@hotmail.com">renanmgx@hotmail.com</a></li>
+          <li><i class="fas fa-graduation-cap accent" aria-hidden="true"></i><span>Bacharel em Ciencia da Computacao — Unip</span></li>
+        </ul>
+      </div>
+      <div class="github-stats-block">
+        <img id="ghStatsImg"
+          src="https://github-readme-stats.vercel.app/api?username=RenanMGX&show_icons=true&hide_border=true&bg_color=161b22&title_color=00d9a3&icon_color=00d9a3&text_color=e6edf3&rank_icon=github"
+          alt="Estatisticas do GitHub de Renan Oliveira" loading="lazy" class="gh-stat-img" />
+        <img id="ghLangsImg"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=RenanMGX&layout=compact&hide_border=true&bg_color=161b22&title_color=00d9a3&text_color=e6edf3&langs_count=6"
+          alt="Linguagens mais usadas por Renan no GitHub" loading="lazy" class="gh-stat-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades" class="section section-alt" aria-label="Habilidades tecnicas">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Habilidades <span class="accent">Tecnicas</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="skills-categories">
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-code accent" aria-hidden="true"></i> Linguagens</h3>
+        <div class="skills-grid">
+          <div class="skill-badge"><i class="devicon-python-plain colored" aria-hidden="true"></i><span>Python</span></div>
+          <div class="skill-badge"><i class="devicon-csharp-plain colored" aria-hidden="true"></i><span>C#</span></div>
+          <div class="skill-badge"><i class="devicon-php-plain colored" aria-hidden="true"></i><span>PHP</span></div>
+          <div class="skill-badge"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><span>JavaScript</span></div>
+          <div class="skill-badge"><i class="devicon-mysql-plain colored" aria-hidden="true"></i><span>SQL / MySQL</span></div>
+          <div class="skill-badge"><i class="fas fa-database accent" aria-hidden="true"></i><span>ABAP / SAP</span></div>
+          <div class="skill-badge"><i class="devicon-html5-plain colored" aria-hidden="true"></i><span>HTML / CSS</span></div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-robot accent" aria-hidden="true"></i> RPA &amp; Automacao</h3>
+        <div class="skills-grid">
+          <div class="skill-badge"><i class="fas fa-cogs accent" aria-hidden="true"></i><span>SAP GUI Scripting</span></div>
+          <div class="skill-badge"><i class="fas fa-robot accent" aria-hidden="true"></i><span>BotCity</span></div>
+          <div class="skill-badge"><i class="devicon-selenium-original colored" aria-hidden="true"></i><span>Selenium</span></div>
+          <div class="skill-badge"><i class="fas fa-mouse-pointer accent" aria-hidden="true"></i><span>PyAutoGUI</span></div>
+          <div class="skill-badge"><i class="devicon-pandas-plain colored" aria-hidden="true"></i><span>Pandas</span></div>
+          <div class="skill-badge"><i class="fas fa-file-excel" aria-hidden="true" style="color:#107c41"></i><span>OpenPyXL</span></div>
+          <div class="skill-badge"><i class="fas fa-calendar-check accent" aria-hidden="true"></i><span>Orquestracao</span></div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-brain accent" aria-hidden="true"></i> IA &amp; Machine Learning</h3>
+        <div class="skills-grid">
+          <div class="skill-badge"><i class="fas fa-circle-nodes accent" aria-hidden="true"></i><span>Ollama (IA local)</span></div>
+          <div class="skill-badge"><i class="fas fa-gem" aria-hidden="true" style="color:#4285f4"></i><span>Gemini AI</span></div>
+          <div class="skill-badge"><i class="fas fa-magnifying-glass accent" aria-hidden="true"></i><span>RAG</span></div>
+          <div class="skill-badge"><i class="fas fa-comments accent" aria-hidden="true"></i><span>Agentes conversacionais</span></div>
+          <div class="skill-badge"><i class="fas fa-file-pdf" aria-hidden="true" style="color:#e44d26"></i><span>PyPDF2 / docx</span></div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-plug accent" aria-hidden="true"></i> APIs &amp; Frameworks</h3>
+        <div class="skills-grid">
+          <div class="skill-badge"><i class="devicon-fastapi-plain colored" aria-hidden="true"></i><span>FastAPI</span></div>
+          <div class="skill-badge"><i class="fas fa-flask accent" aria-hidden="true"></i><span>Flask</span></div>
+          <div class="skill-badge"><i class="fas fa-server" aria-hidden="true" style="color:#ff6600"></i><span>Oracle CRM API</span></div>
+          <div class="skill-badge"><i class="fas fa-exchange-alt accent" aria-hidden="true"></i><span>REST APIs</span></div>
+          <div class="skill-badge"><i class="fas fa-network-wired accent" aria-hidden="true"></i><span>SFTP / HTTP</span></div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3 class="category-title"><i class="fas fa-tools accent" aria-hidden="true"></i> Ferramentas &amp; Infra</h3>
+        <div class="skills-grid">
+          <div class="skill-badge"><i class="devicon-git-plain colored" aria-hidden="true"></i><span>Git / GitHub</span></div>
+          <div class="skill-badge"><i class="fas fa-chart-bar" aria-hidden="true" style="color:#f2a300"></i><span>Power BI</span></div>
+          <div class="skill-badge"><i class="devicon-windows8-original colored" aria-hidden="true"></i><span>Windows Server</span></div>
+          <div class="skill-badge"><i class="devicon-linux-plain" aria-hidden="true" style="color:#e6edf3"></i><span>Linux</span></div>
+          <div class="skill-badge"><i class="fas fa-ticket-alt accent" aria-hidden="true"></i><span>ZenDesk</span></div>
+          <div class="skill-badge"><i class="devicon-docker-plain colored" aria-hidden="true"></i><span>Docker</span></div>
+          <div class="skill-badge"><i class="fas fa-wifi accent" aria-hidden="true"></i><span>Redes / TCP-IP</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia" class="section" aria-label="Experiencia profissional">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Experiencia <span class="accent">Profissional</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="exp-timeline reveal" id="expTimeline" aria-live="polite" aria-label="Experiencia profissional">
+      <div class="exp-skeleton" aria-hidden="true"></div>
+      <div class="exp-skeleton" aria-hidden="true"></div>
+      <div class="exp-skeleton" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos" class="section section-alt" aria-label="Projetos em destaque">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Projetos <span class="accent">em Destaque</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+      <p class="section-subtitle">Automacao, APIs e IA aplicada — solucoes com impacto real nos negocios.</p>
+    </div>
+    <div class="projects-grid reveal">
+      <article class="project-card featured">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-robot accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/Agente-Ollama" target="_blank" rel="noopener noreferrer" aria-label="Ver Agente-Ollama no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
           </div>
         </div>
-        <!-- /Page changer wrapper -->
-      </div>
-      <!-- /Main Content -->
+        <h3 class="project-title">Agente-Ollama <span class="tag" style="font-size:0.62rem;vertical-align:middle">IA Local</span></h3>
+        <p class="project-desc">Agente conversacional com RAG usando Ollama. Indexa documentos (PDF, Word, Excel), gera embeddings e responde com contexto — 100% on-premise, sem nuvem.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">Embeddings</span></div>
+      </article>
+      <article class="project-card featured">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-brain accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/ConsumoApiCRM_ORACLE" target="_blank" rel="noopener noreferrer" aria-label="Ver ConsumoApiCRM no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Oracle CRM + Gemini AI</h3>
+        <p class="project-desc">Automacao que consome a API CRM da Oracle, processa dados incrementalmente e usa o Gemini AI para filtragem inteligente de spam e enriquecimento de cadastros.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">Oracle API</span><span class="tag">Gemini AI</span><span class="tag">CRM</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-chart-line accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/Automation_Indices" target="_blank" rel="noopener noreferrer" aria-label="Ver Automation_Indices no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Automacao de Indices Financeiros</h3>
+        <p class="project-desc">Sistema financeiro para gerenciar indices do mercado imobiliario (INCC, IGP-M) com web scraping, integracao SAP e relatorios automaticos no Power BI.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">SAP</span><span class="tag">Web Scraping</span><span class="tag">Power BI</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-file-invoice-dollar accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/gerador_incorridos" target="_blank" rel="noopener noreferrer" aria-label="Ver gerador_incorridos no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Gerador de Incorridos</h3>
+        <p class="project-desc">Pipeline completa: conexao SAP, extracao de dados de empreendimentos, relatorios Excel consolidados com indices INCC via integracao web. Fluxo 100% automatizado.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">SAP</span><span class="tag">Excel</span><span class="tag">RPA</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-network-wired accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/inventario" target="_blank" rel="noopener noreferrer" aria-label="Ver inventario no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Sistema de Telemetria de Rede</h3>
+        <p class="project-desc">Coleta dados de hardware/software de todos os PCs da rede via API Flask, armazena em CSV e gera dashboards no Power BI. Deploy automatizado via GPO.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">GPO</span><span class="tag">Power BI</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-file-contract accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/57595-Processos_de_Faturamento" target="_blank" rel="noopener noreferrer" aria-label="Ver Processos de Faturamento no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Automacao de Faturamento SAP</h3>
+        <p class="project-desc">Automacao completa do processo de faturamento no SAP: executa lancamentos, valida dados, gera relatorios e envia notificacoes de forma totalmente autonoma. Ativo em producao desde 2025.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">SAP</span><span class="tag">RPA</span><span class="tag">Faturamento</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fab fa-whatsapp" aria-hidden="true" style="color:#25D366;font-size:1.4rem"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/bot_whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Ver bot_whatsapp no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Bot WhatsApp Massivo</h3>
+        <p class="project-desc">Le planilha Excel com contatos e dispara mensagens personalizadas com arquivos anexos de forma sequencial, com interface grafica de acompanhamento em tempo real.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">WhatsApp</span><span class="tag">Excel</span><span class="tag">Tkinter</span></div>
+      </article>
+      <article class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-code-branch accent" aria-hidden="true"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/RenanMGX/Imobme_Extract_API" target="_blank" rel="noopener noreferrer" aria-label="Ver Imobme_Extract_API no GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <h3 class="project-title">Imobme Extract API</h3>
+        <p class="project-desc">API que automatiza a extracao de dados do sistema Imobme via RPA e os disponibiliza como endpoint HTTP — integrando o sistema legado com outras ferramentas via REST. Atualizado em Mai/2026.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">RPA</span><span class="tag">REST</span></div>
+      </article>
     </div>
-    <footer>
-      <!-- <div class="copyrights">&copy; Geek University</div> -->
-    </footer>
-    <script>
-    // Data específica
-        function calcularIdade(dataNascimento) {
-            const hoje = new Date();
-            const nascimento = new Date(dataNascimento);
-            let idade = hoje.getFullYear() - nascimento.getFullYear();
-            const mes = hoje.getMonth() - nascimento.getMonth();
-            if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
-                idade--;
-            }
-            return idade;
-        }
+    <div class="github-repos-section reveal">
+      <h3 class="subsection-title">Repositorios <span class="accent">Recentes no GitHub</span></h3>
+      <p class="subsection-subtitle">
+        <span class="live-dot" aria-hidden="true"></span>
+        Atualizado automaticamente via GitHub API
+      </p>
+      <div class="repos-grid" id="reposGrid" aria-live="polite" aria-label="Repositorios recentes do GitHub">
+        <div class="repo-skeleton" aria-hidden="true"></div>
+        <div class="repo-skeleton" aria-hidden="true"></div>
+        <div class="repo-skeleton" aria-hidden="true"></div>
+        <div class="repo-skeleton" aria-hidden="true"></div>
+        <div class="repo-skeleton" aria-hidden="true"></div>
+        <div class="repo-skeleton" aria-hidden="true"></div>
+      </div>
+      <div class="repos-footer">
+        <a href="https://github.com/RenanMGX?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fab fa-github" aria-hidden="true"></i> Ver todos os repositorios
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const dataNascimento = '1994-10-24'; // Substitua pela sua data de nascimento
-        const idade = calcularIdade(dataNascimento);
+<section id="formacao" class="section" aria-label="Formacao e certificacoes">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Formacao &amp; <span class="accent">Certificacoes</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="edu-grid reveal">
+      <div>
+        <h3 class="edu-block-title"><i class="fas fa-university accent" aria-hidden="true"></i> Graduacao</h3>
+        <div class="edu-main-card" id="eduContainer" aria-live="polite">
+          <div class="edu-skeleton" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="edu-block-title"><i class="fas fa-certificate accent" aria-hidden="true"></i> Certificacoes</h3>
+        <div class="certs-grid" id="certsGrid" aria-live="polite">
+          <div class="cert-skeleton" aria-hidden="true"></div>
+          <div class="cert-skeleton" aria-hidden="true"></div>
+          <div class="cert-skeleton" aria-hidden="true"></div>
+          <div class="cert-skeleton" aria-hidden="true"></div>
+          <div class="cert-skeleton" aria-hidden="true"></div>
+          <div class="cert-skeleton" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        document.getElementById("idade_auto").innerHTML = idade;
+<section id="contato" class="section section-alt" aria-label="Contato">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Vamos <span class="accent">Conversar?</span></h2>
+      <div class="section-line" aria-hidden="true"></div>
+      <p class="section-subtitle">Aberto a novas oportunidades, projetos e colaboracoes.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
+        <h4>E-mail</h4>
+        <a href="mailto:renanmgx@hotmail.com">renanmgx@hotmail.com</a>
+      </div>
+      <div class="contact-card">
+        <i class="fab fa-linkedin-in contact-icon" aria-hidden="true"></i>
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/in/renanmgx/" target="_blank" rel="noopener noreferrer">linkedin.com/in/renanmgx</a>
+      </div>
+      <div class="contact-card">
+        <i class="fab fa-github contact-icon" aria-hidden="true"></i>
+        <h4>GitHub</h4>
+        <a href="https://github.com/RenanMGX" target="_blank" rel="noopener noreferrer">github.com/RenanMGX</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<footer class="footer" role="contentinfo">
+  <div class="footer-bottom">
+    <span>&copy; <span id="currentYear"></span> Renan Oliveira. Todos os direitos reservados.</span>
+  </div>
+</footer>
 
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da pagina">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
 
-
-      </script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/pages-switcher.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/validator.js"></script>
-    <script type="text/javascript" src="js/jquery.shuffle.min.js"></script>
-    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-    <script type="text/javascript" src="js/jquery.googlemap.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
+<script src="js/portfolio.js"></script>
+</body>
 </html>
