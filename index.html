@@ -144,12 +144,24 @@
         </ul>
       </div>
       <div class="github-stats-block">
-        <img id="ghStatsImg"
-          src="https://github-readme-stats.vercel.app/api?username=RenanMGX&show_icons=true&hide_border=true&bg_color=161b22&title_color=00d9a3&icon_color=00d9a3&text_color=e6edf3&rank_icon=github"
-          alt="Estatisticas do GitHub de Renan Oliveira" loading="lazy" class="gh-stat-img" />
-        <img id="ghLangsImg"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=RenanMGX&layout=compact&hide_border=true&bg_color=161b22&title_color=00d9a3&text_color=e6edf3&langs_count=6"
-          alt="Linguagens mais usadas por Renan no GitHub" loading="lazy" class="gh-stat-img" />
+        <div class="gh-native-card" aria-label="Estatisticas do GitHub de Renan Oliveira">
+          <div class="gh-native-header">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub Stats</span>
+          </div>
+          <div class="gh-native-body" id="ghStatsBody">
+            <div class="gh-stat-skeleton" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="gh-native-card" aria-label="Linguagens mais usadas por Renan no GitHub">
+          <div class="gh-native-header">
+            <i class="fas fa-code" aria-hidden="true"></i>
+            <span>Top Linguagens</span>
+          </div>
+          <div class="gh-native-body" id="ghLangsBody">
+            <div class="gh-stat-skeleton" aria-hidden="true"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

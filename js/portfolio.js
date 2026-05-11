@@ -12,19 +12,6 @@
   const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
-  const ghStatsImg = document.getElementById('ghStatsImg');
-  const ghLangsImg = document.getElementById('ghLangsImg');
-
-  const STATS = {
-    dark: {
-      stats: 'https://github-readme-stats.vercel.app/api?username=RenanMGX&show_icons=true&hide_border=true&bg_color=161b22&title_color=00d9a3&icon_color=00d9a3&text_color=e6edf3&rank_icon=github',
-      langs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=RenanMGX&layout=compact&hide_border=true&bg_color=161b22&title_color=00d9a3&text_color=e6edf3&langs_count=6',
-    },
-    light: {
-      stats: 'https://github-readme-stats.vercel.app/api?username=RenanMGX&show_icons=true&hide_border=true&bg_color=f6f8fa&title_color=00a37a&icon_color=00a37a&text_color=1f2328&rank_icon=github',
-      langs: 'https://github-readme-stats.vercel.app/api/top-langs/?username=RenanMGX&layout=compact&hide_border=true&bg_color=f6f8fa&title_color=00a37a&text_color=1f2328&langs_count=6',
-    },
-  };
 
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
@@ -33,8 +20,6 @@
     if (themeIcon) {
       themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
     }
-    if (ghStatsImg) ghStatsImg.src = STATS[theme].stats;
-    if (ghLangsImg) ghLangsImg.src = STATS[theme].langs;
 
     // Update navbar scroll background on theme change
     updateNavbarBg();
@@ -338,6 +323,7 @@
         var cached = JSON.parse(raw);
         if (Date.now() - cached.ts < CACHE_TTL) {
           renderRepos(cached.data);
+          renderLangStats(cached.data);
           return;
         }
       }
@@ -359,6 +345,7 @@
           localStorage.setItem(CACHE_KEY, JSON.stringify({ data: data, ts: Date.now() }));
         } catch (e) { /* storage full, ignore */ }
         renderRepos(data);
+        renderLangStats(data);
       })
       .catch(function (err) {
         console.warn('GitHub API error:', err);
@@ -366,20 +353,32 @@
       });
   }
 
-  // Lazy-load repos when projects section becomes visible
+  // Carregar repos quando a seção "sobre" ou "projetos" ficar visível
   var projectsSection = document.getElementById('projetos');
-  if (projectsSection && 'IntersectionObserver' in window) {
-    var repoObserver = new IntersectionObserver(
+  var sobreSection = document.getElementById('sobre');
+  var repoFetched = false;
+
+  function triggerFetchRepos() {
+    if (!repoFetched) {
+      repoFetched = true;
+      fetchRepos();
+      if (repoObserver) repoObserver.disconnect();
+    }
+  }
+
+  var repoObserver = null;
+  var sectionsToObserve = [sobreSection, projectsSection].filter(Boolean);
+  if (sectionsToObserve.length && 'IntersectionObserver' in window) {
+    repoObserver = new IntersectionObserver(
       function (entries) {
-        if (entries[0].isIntersecting) {
-          fetchRepos();
-          repoObserver.disconnect();
+        if (entries.some(function (e) { return e.isIntersecting; })) {
+          triggerFetchRepos();
         }
       },
       { threshold: 0.05 }
     );
-    repoObserver.observe(projectsSection);
-  } else if (projectsSection) {
+    sectionsToObserve.forEach(function (s) { repoObserver.observe(s); });
+  } else {
     fetchRepos();
   }
 
@@ -397,6 +396,44 @@
     if (statRepos && data.public_repos) {
       statRepos.textContent = data.public_repos;
     }
+    var ghStatsBody = document.getElementById('ghStatsBody');
+    if (ghStatsBody && data.public_repos !== undefined) {
+      ghStatsBody.innerHTML =
+        '<div class="gh-stat-row"><i class="fas fa-book" aria-hidden="true"></i><span class="gh-stat-label">Repositórios públicos</span><span class="gh-stat-val">' + data.public_repos + '</span></div>' +
+        '<div class="gh-stat-row"><i class="fas fa-users" aria-hidden="true"></i><span class="gh-stat-label">Seguidores</span><span class="gh-stat-val">' + data.followers + '</span></div>' +
+        '<div class="gh-stat-row"><i class="fas fa-user-plus" aria-hidden="true"></i><span class="gh-stat-label">Seguindo</span><span class="gh-stat-val">' + data.following + '</span></div>';
+    }
+  }
+
+  function renderLangStats(repos) {
+    var ghLangsBody = document.getElementById('ghLangsBody');
+    if (!ghLangsBody) return;
+    var counts = {};
+    repos.forEach(function (r) {
+      if (r.language) {
+        counts[r.language] = (counts[r.language] || 0) + 1;
+      }
+    });
+    var sorted = Object.keys(counts)
+      .sort(function (a, b) { return counts[b] - counts[a]; })
+      .slice(0, 6);
+    var total = sorted.reduce(function (s, l) { return s + counts[l]; }, 0);
+    if (sorted.length === 0) {
+      ghLangsBody.innerHTML = '<p style="font-size:0.8rem;color:var(--text-muted);text-align:center;padding:16px 0">Sem dados de linguagem</p>';
+      return;
+    }
+    ghLangsBody.innerHTML = sorted.map(function (lang) {
+      var pct = total > 0 ? ((counts[lang] / total) * 100).toFixed(1) : 0;
+      var color = getLangColor(lang);
+      return (
+        '<div class="gh-lang-item">' +
+        '<span class="gh-lang-dot" style="background:' + color + '" aria-hidden="true"></span>' +
+        '<span class="gh-lang-name">' + escapeHtml(lang) + '</span>' +
+        '<span class="gh-lang-pct">' + pct + '%</span>' +
+        '</div>' +
+        '<div class="gh-lang-bar-wrap" aria-hidden="true"><div class="gh-lang-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>'
+      );
+    }).join('');
   }
 
   function fetchGitHubProfile() {
