@@ -353,34 +353,8 @@
       });
   }
 
-  // Carregar repos quando a seção "sobre" ou "projetos" ficar visível
-  var projectsSection = document.getElementById('projetos');
-  var sobreSection = document.getElementById('sobre');
-  var repoFetched = false;
-
-  function triggerFetchRepos() {
-    if (!repoFetched) {
-      repoFetched = true;
-      fetchRepos();
-      if (repoObserver) repoObserver.disconnect();
-    }
-  }
-
-  var repoObserver = null;
-  var sectionsToObserve = [sobreSection, projectsSection].filter(Boolean);
-  if (sectionsToObserve.length && 'IntersectionObserver' in window) {
-    repoObserver = new IntersectionObserver(
-      function (entries) {
-        if (entries.some(function (e) { return e.isIntersecting; })) {
-          triggerFetchRepos();
-        }
-      },
-      { threshold: 0.05 }
-    );
-    sectionsToObserve.forEach(function (s) { repoObserver.observe(s); });
-  } else {
-    fetchRepos();
-  }
+  // Carregar repos imediatamente para popular GitHub Stats e Top Linguagens sem esperar scroll
+  fetchRepos();
 
   /* ----------------------------------------------------------
      GITHUB PROFILE — foto e contagens dinâmicas
