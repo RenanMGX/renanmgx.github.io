@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renan Oliveira — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .cv-root *, .cv-root *::before, .cv-root *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .cv-root {
+      --accent: #007a5a;
+      --text: #1a1a2e;
+      --text-secondary: #444;
+      --text-muted: #666;
+      --border: #d0d7de;
+      --bg: #ffffff;
+      --section-gap: 22px;
+      font-size: 10.5pt;
+      font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+      padding: 40px 48px;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+
+    /* ─── PRINT ─────────────────────────────────────────── */
+    @media print {
+      @page { size: A4; margin: 1.2cm 1.4cm; }
+      .cv-root { padding: 0; max-width: none; font-size: 9.5pt; }
+      a { color: var(--accent) !important; text-decoration: none; }
+      .no-print { display: none !important; }
+      section { page-break-inside: avoid; }
+    }
+
+    /* ─── HEADER ─────────────────────────────────────────── */
+    .cv-header { margin-bottom: 20px; }
+    .cv-name {
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .cv-name span { color: var(--accent); }
+    .cv-title {
+      font-size: 11.5pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 4px 0 12px;
+    }
+    .cv-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 8.8pt;
+      color: var(--text-secondary);
+    }
+    .cv-contacts a { color: var(--accent); text-decoration: none; }
+    .cv-contacts a:hover { text-decoration: underline; }
+
+    /* ─── DIVIDER ─────────────────────────────────────────── */
+    .cv-divider {
+      border: none;
+      border-top: 2px solid var(--accent);
+      margin: 16px 0;
+      opacity: 0.25;
+    }
+
+    /* ─── SECTION ─────────────────────────────────────────── */
+    section { margin-bottom: var(--section-gap); }
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ─── SUMMARY ─────────────────────────────────────────── */
+    .summary p {
+      font-size: 9.5pt;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ─── EXPERIENCE ─────────────────────────────────────── */
+    .exp-entry { margin-bottom: 16px; }
+    .exp-entry:last-child { margin-bottom: 0; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px 10px;
+    }
+    .exp-role {
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--text);
+    }
+    .exp-period {
+      font-size: 8.5pt;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .exp-company {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .exp-desc {
+      font-size: 9pt;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+    }
+    .exp-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .exp-highlights li {
+      font-size: 8.8pt;
+      color: var(--text-secondary);
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 2px;
+      line-height: 1.5;
+    }
+    .exp-highlights li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8pt;
+    }
+    .exp-tags {
+      margin-top: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .tag {
+      font-size: 7.5pt;
+      font-weight: 500;
+      background: #eef6f2;
+      color: var(--accent);
+      border: 1px solid #c6e0d8;
+      border-radius: 4px;
+      padding: 1px 6px;
+    }
+
+    /* ─── PROJECTS ───────────────────────────────────────── */
+    .project-entry { margin-bottom: 13px; }
+    .project-entry:last-child { margin-bottom: 0; }
+    .project-title-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px 10px;
+    }
+    .project-name {
+      font-weight: 600;
+      font-size: 9.5pt;
+      color: var(--text);
+    }
+    .project-link {
+      font-size: 8pt;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .project-desc {
+      font-size: 8.8pt;
+      color: var(--text-secondary);
+      margin: 3px 0 5px;
+    }
+
+    /* ─── SKILLS ─────────────────────────────────────────── */
+    .skills-block { margin-bottom: 10px; }
+    .skills-block:last-child { margin-bottom: 0; }
+    .skills-label {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    /* ─── EDUCATION ──────────────────────────────────────── */
+    .edu-entry {}
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px 10px;
+    }
+    .edu-degree { font-weight: 600; font-size: 10pt; }
+    .edu-period { font-size: 8.5pt; color: var(--text-muted); }
+    .edu-institution { font-size: 9pt; color: var(--accent); font-weight: 500; margin-bottom: 3px; }
+    .edu-desc { font-size: 8.8pt; color: var(--text-secondary); }
+
+    /* ─── CERTIFICATIONS ─────────────────────────────────── */
+    .certs-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .cert-entry {
+      font-size: 8.8pt;
+    }
+    .cert-name {
+      font-weight: 500;
+      color: var(--text);
+    }
+    .cert-meta {
+      color: var(--text-muted);
+      font-size: 8pt;
+    }
+
+    /* ─── PRINT BUTTON ───────────────────────────────────── */
+    .print-btn-bar {
+      text-align: center;
+      padding: 18px 0 4px;
+    }
+    .print-btn {
+      font-family: inherit;
+      font-size: 9.5pt;
+      font-weight: 600;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 22px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+    }
+    .print-btn:hover { opacity: 0.88; }
+  </style>
+</head>
+<body>
+
+<!-- PRINT BUTTON (hidden on print) -->
+<div class="print-btn-bar no-print">
+  <button class="print-btn" onclick="window.print()">🖨️ Salvar como PDF (Ctrl+P → Salvar como PDF)</button>
+</div>
+
+<div class="cv-root">
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════════ -->
+<header class="cv-header">
+  <div class="cv-name">Renan <span>Oliveira</span></div>
+  <div class="cv-title">Desenvolvedor Pleno · Python · RPA · Inteligência Artificial</div>
+  <div class="cv-contacts">
+    <span>📍 Belo Horizonte, MG — Brasil</span>
+    <span>✉ <a href="mailto:renanmgx@hotmail.com">renanmgx@hotmail.com</a></span>
+    <span>🔗 <a href="https://linkedin.com/in/renanmgx" target="_blank">linkedin.com/in/renanmgx</a></span>
+    <span>💻 <a href="https://github.com/RenanMGX" target="_blank">github.com/RenanMGX</a></span>
+    <span>🌐 <a href="https://renanmgx.github.io" target="_blank">renanmgx.github.io</a></span>
+  </div>
+</header>
+
+<hr class="cv-divider" />
+
+<!-- ═══════════════════════════════════════════════════════════
+     RESUMO PROFISSIONAL
+═══════════════════════════════════════════════════════════ -->
+<section class="summary">
+  <h2 class="section-title">Resumo Profissional</h2>
+  <p>
+    Desenvolvedor Pleno com 5+ anos em TI e 3+ anos focados em desenvolvimento Python,
+    especializado em <strong>automação inteligente (RPA)</strong>, integração com sistemas
+    corporativos (<strong>SAP, Oracle CRM</strong>) e construção de pipelines de dados com
+    <strong>FastAPI</strong>. Pioneiro em RPA no Grupo Patrimar, com 15+ automações em execução
+    contínua em produção. Atua ativamente com <strong>IA generativa</strong> — agentes RAG com
+    Ollama e integração com <strong>Gemini AI</strong> para processamento inteligente de dados.
+    Orientado a resultados mensuráveis: código limpo, manutenível e com impacto direto no negócio.
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXPERIÊNCIA PROFISSIONAL
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2 class="section-title">Experiência Profissional</h2>
+
+  <div class="exp-entry">
+    <div class="exp-header">
+      <span class="exp-role">Desenvolvedor Pleno</span>
+      <span class="exp-period">Mar/2026 — Presente</span>
+    </div>
+    <div class="exp-company">Grupo Patrimar · Belo Horizonte, MG</div>
+    <p class="exp-desc">
+      Análise de demandas técnicas, desenvolvimento e manutenção de aplicações, automações RPA
+      e componentes de IA com integração a SAP, Oracle e outras plataformas corporativas.
+      Revisão de código, testes, documentação e suporte a CI/CD.
+    </p>
+    <ul class="exp-highlights">
+      <li>Integração full-stack com SAP, Oracle CRM e outras plataformas corporativas</li>
+      <li>Sustentação autônoma de sistemas e resolução de incidentes em produção</li>
+      <li>Apoio a desenvolvedores juniores e condução de iniciativas internas de melhoria</li>
+      <li>Melhorias preventivas de observabilidade, confiabilidade e desempenho</li>
+    </ul>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">RPA</span><span class="tag">SAP</span>
+      <span class="tag">Oracle</span><span class="tag">FastAPI</span><span class="tag">BotCity</span>
+      <span class="tag">IA</span><span class="tag">CI/CD</span><span class="tag">Git</span>
+    </div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-header">
+      <span class="exp-role">Analista de TI Pleno</span>
+      <span class="exp-period">Fev/2024 — Mar/2026</span>
+    </div>
+    <div class="exp-company">Grupo Patrimar · Belo Horizonte, MG</div>
+    <p class="exp-desc">
+      Pioneiro na função de Desenvolvedor RPA na empresa, introduzindo automação de processos
+      e melhorando significativamente a eficiência operacional. Membro ativo da Squad de BI.
+    </p>
+    <ul class="exp-highlights">
+      <li>15+ automações em execução contínua no servidor, orquestradas por scheduler próprio</li>
+      <li>Automações financeiras reduzindo tempo de processamento de <strong>dias para minutos</strong></li>
+      <li>Integração Oracle CRM API + Gemini AI para enriquecimento inteligente de dados de clientes</li>
+      <li>Agente IA local com RAG (Ollama) para consulta semântica de documentos internos</li>
+    </ul>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">RPA</span><span class="tag">Selenium</span>
+      <span class="tag">FastAPI</span><span class="tag">Pandas</span><span class="tag">Power BI</span>
+      <span class="tag">MySQL</span>
+    </div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-header">
+      <span class="exp-role">Analista de TI Junior</span>
+      <span class="exp-period">Abr/2023 — Fev/2024</span>
+    </div>
+    <div class="exp-company">Grupo Patrimar · Belo Horizonte, MG</div>
+    <p class="exp-desc">
+      Desenvolvimento de automações Python e dashboards de BI para suporte à tomada de decisão
+      baseada em dados, contribuindo para a Squad de BI da empresa.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">RPA</span><span class="tag">Power BI</span>
+      <span class="tag">FastAPI</span><span class="tag">Automação</span>
+    </div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-header">
+      <span class="exp-role">Assistente de TI</span>
+      <span class="exp-period">Jun/2021 — Abr/2023</span>
+    </div>
+    <div class="exp-company">Grupo Patrimar · Belo Horizonte, MG</div>
+    <p class="exp-desc">
+      Suporte técnico de infraestrutura: redes, hardware, Office 365, telefonia IP e atendimento
+      via ZenDesk. Controle de licenças e garantia de disponibilidade dos sistemas de TI.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Suporte Técnico</span><span class="tag">Redes</span>
+      <span class="tag">Office 365</span><span class="tag">ZenDesk</span>
+    </div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-header">
+      <span class="exp-role">Auxiliar de TI</span>
+      <span class="exp-period">Jul/2019 — Jun/2021</span>
+    </div>
+    <div class="exp-company">Ibhes / Facemg · Belo Horizonte, MG</div>
+    <p class="exp-desc">
+      Atividades técnicas de TI em instituição de ensino: montagem e manutenção de computadores,
+      instalação e configuração de redes e software.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Suporte</span><span class="tag">Hardware</span>
+      <span class="tag">Redes</span><span class="tag">Software</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROJETOS EM DESTAQUE
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2 class="section-title">Projetos em Destaque</h2>
+
+  <div class="project-entry">
+    <div class="project-title-line">
+      <span class="project-name">Agente-Ollama — IA Conversacional com RAG</span>
+      <a class="project-link" href="https://github.com/RenanMGX/Agente-Ollama" target="_blank">github.com/RenanMGX/Agente-Ollama</a>
+    </div>
+    <p class="project-desc">
+      Agente conversacional 100% on-premise usando Ollama. Indexa documentos (PDF, Word, Excel),
+      gera embeddings e responde com contexto semântico — sem dependência de nuvem.
+      Elimina consultas manuais a documentações internas.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">Ollama</span>
+      <span class="tag">RAG</span><span class="tag">Embeddings</span>
+    </div>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title-line">
+      <span class="project-name">Oracle CRM + Gemini AI — Enriquecimento de Dados</span>
+      <a class="project-link" href="https://github.com/RenanMGX/ConsumoApiCRM_ORACLE" target="_blank">github.com/RenanMGX/ConsumoApiCRM_ORACLE</a>
+    </div>
+    <p class="project-desc">
+      Automação que consome a API CRM da Oracle, processa dados incrementalmente e usa Gemini AI
+      para filtragem inteligente de spam e enriquecimento de cadastros de clientes.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">Oracle API</span>
+      <span class="tag">Gemini AI</span><span class="tag">CRM</span>
+    </div>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title-line">
+      <span class="project-name">Automação de Índices Financeiros (INCC / IGP-M)</span>
+      <a class="project-link" href="https://github.com/RenanMGX/Automation_Indices" target="_blank">github.com/RenanMGX/Automation_Indices</a>
+    </div>
+    <p class="project-desc">
+      Sistema para gerenciar índices do mercado imobiliário com web scraping, integração SAP
+      e relatórios automáticos no Power BI. Elimina atualização manual mensal de índices.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">SAP</span>
+      <span class="tag">Web Scraping</span><span class="tag">Power BI</span>
+    </div>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title-line">
+      <span class="project-name">Imobme Extract API — Integração de Sistema Legado</span>
+      <a class="project-link" href="https://github.com/RenanMGX/Imobme_Extract_API" target="_blank">github.com/RenanMGX/Imobme_Extract_API</a>
+    </div>
+    <p class="project-desc">
+      API que automatiza a extração de dados do sistema Imobme via RPA e os disponibiliza como
+      endpoint HTTP REST — integrando sistema legado com ferramentas modernas.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">FastAPI</span>
+      <span class="tag">RPA</span><span class="tag">REST</span>
+    </div>
+  </div>
+
+  <div class="project-entry">
+    <div class="project-title-line">
+      <span class="project-name">Sistema de Telemetria de Rede</span>
+      <a class="project-link" href="https://github.com/RenanMGX/inventario" target="_blank">github.com/RenanMGX/inventario</a>
+    </div>
+    <p class="project-desc">
+      Coleta dados de hardware/software de todos os PCs da rede via API Flask, armazena em CSV
+      e gera dashboards no Power BI. Deploy automatizado via GPO.
+    </p>
+    <div class="exp-tags">
+      <span class="tag">Python</span><span class="tag">Flask</span>
+      <span class="tag">GPO</span><span class="tag">Power BI</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HABILIDADES TÉCNICAS
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2 class="section-title">Habilidades Técnicas</h2>
+
+  <div class="skills-block">
+    <div class="skills-label">Linguagens de Programação</div>
+    <div class="skills-list">
+      <span class="tag">Python</span><span class="tag">C#</span><span class="tag">PHP</span>
+      <span class="tag">JavaScript</span><span class="tag">SQL / MySQL</span>
+      <span class="tag">ABAP / SAP</span><span class="tag">HTML / CSS</span>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <div class="skills-label">RPA &amp; Automação</div>
+    <div class="skills-list">
+      <span class="tag">SAP GUI Scripting</span><span class="tag">BotCity</span>
+      <span class="tag">Selenium</span><span class="tag">PyAutoGUI</span>
+      <span class="tag">Pandas</span><span class="tag">OpenPyXL</span>
+      <span class="tag">Orquestração de Processos</span>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <div class="skills-label">Inteligência Artificial &amp; Machine Learning</div>
+    <div class="skills-list">
+      <span class="tag">Ollama (IA local)</span><span class="tag">Gemini AI</span>
+      <span class="tag">RAG (Retrieval-Augmented Generation)</span>
+      <span class="tag">Agentes Conversacionais</span>
+      <span class="tag">PyPDF2 / python-docx</span>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <div class="skills-label">APIs &amp; Frameworks</div>
+    <div class="skills-list">
+      <span class="tag">FastAPI</span><span class="tag">Flask</span>
+      <span class="tag">Oracle CRM API</span><span class="tag">REST APIs</span>
+      <span class="tag">SFTP / HTTP</span>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <div class="skills-label">Ferramentas &amp; Infraestrutura</div>
+    <div class="skills-list">
+      <span class="tag">Git / GitHub</span><span class="tag">Docker</span>
+      <span class="tag">Power BI</span><span class="tag">Windows Server</span>
+      <span class="tag">Linux</span><span class="tag">ZenDesk</span>
+      <span class="tag">Redes / TCP-IP</span>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <div class="skills-label">Soft Skills</div>
+    <div class="skills-list">
+      <span class="tag">Resolução de Problemas</span>
+      <span class="tag">Aprendizado Contínuo</span>
+      <span class="tag">Comunicação Técnica</span>
+      <span class="tag">Autonomia</span>
+      <span class="tag">Pensamento Analítico</span>
+      <span class="tag">Adaptabilidade</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FORMAÇÃO ACADÊMICA
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2 class="section-title">Formação Acadêmica</h2>
+  <div class="edu-entry">
+    <div class="edu-header">
+      <span class="edu-degree">Bacharel em Ciência da Computação</span>
+      <span class="edu-period">Fev/2021 — Dez/2026</span>
+    </div>
+    <div class="edu-institution">Unip — Universidade Paulista</div>
+    <p class="edu-desc">
+      Ênfase em desenvolvimento de software, algoritmos e sistemas.
+      Disciplinas: Java, Python, C#, Estruturas de Dados e Engenharia de Software.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CERTIFICAÇÕES
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2 class="section-title">Certificações</h2>
+  <div class="certs-list">
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-7b095cd0-78c2-4661-a929-2f73faf9688c/" target="_blank">Python do Básico ao Avançado</a></div>
+      <div class="cert-meta">Geek University / Udemy · Jul 2023</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-70395d2b-22e4-439c-aa37-b6dd9f2e4130/" target="_blank">C# Completo — POO + Projetos</a></div>
+      <div class="cert-meta">Udemy · Jan 2024</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-4e03fd0b-038e-43ef-aeac-24eddd462a6a/" target="_blank">Criando Robôs com Python — RPA</a></div>
+      <div class="cert-meta">Udemy · Nov 2023</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-16240bf9-6555-4aed-89dd-2ce043521dae/" target="_blank">Power BI Completo</a></div>
+      <div class="cert-meta">Udemy · Jul 2023</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-51637d6d-d0a1-4d97-96f3-440df0a23636/" target="_blank">ABAP para Iniciantes</a></div>
+      <div class="cert-meta">Udemy · Out 2022</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-67c7e533-4fb3-4ab5-818a-2bee16b62352/" target="_blank">Git &amp; GitHub Essencial</a></div>
+      <div class="cert-meta">Geek University / Udemy · Ago 2023</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name">Automações Inteligentes: Python e BotCity</div>
+      <div class="cert-meta">Udemy · 2024</div>
+    </div>
+    <div class="cert-entry">
+      <div class="cert-name">Padrões de Projeto (Design Patterns) com Python</div>
+      <div class="cert-meta">Udemy · 2024</div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /.cv-root -->
+
+</body>
+</html>

@@ -7,6 +7,200 @@
   'use strict';
 
   /* ----------------------------------------------------------
+     INTERNATIONALISATION (PT / EN)
+  ---------------------------------------------------------- */
+  var I18N = {
+    phrases: {
+      pt: [
+        'Desenvolvedor Python & RPA',
+        'Desenvolvedor Python',
+        'Especialista em RPA',
+        'Automação SAP & APIs',
+        'IA com Ollama & Gemini',
+        'Desenvolvedor Backend'
+      ],
+      en: [
+        'Python & RPA Developer',
+        'Python Developer',
+        'RPA Specialist',
+        'SAP & API Automation',
+        'AI with Ollama & Gemini',
+        'Backend Developer'
+      ]
+    },
+    strings: {
+      pt: {
+        'nav.home': 'Inicio', 'nav.about': 'Sobre', 'nav.skills': 'Habilidades',
+        'nav.experience': 'Experiencia', 'nav.projects': 'Projetos',
+        'nav.education': 'Formacao', 'nav.contact': 'Contato',
+        'hero.badge': 'Disponivel para novas oportunidades',
+        'hero.bio': 'Desenvolvedor Pleno no <strong>Grupo Patrimar</strong> com foco em automacao inteligente. Desenvolvo solucoes em Python para RPA, APIs e IA que eliminam processos manuais, integram sistemas corporativos e escalam operacoes empresariais.',
+        'hero.btn.projects': 'Ver Projetos', 'hero.btn.contact': 'Contato',
+        'hero.stat.repos': 'Repositorios', 'hero.stat.contribs': 'Contrib. 2025',
+        'hero.stat.devyears': 'Anos dev', 'hero.stat.ityears': 'Anos em TI',
+        'about.title': 'Sobre <span class="accent">Mim</span>',
+        'about.p1': 'Sou um desenvolvedor apaixonado por automacao inteligente, com solida experiencia em <strong>Python, RPA, IA e APIs</strong>. Atuo como Desenvolvedor Pleno no <strong>Grupo Patrimar</strong>, desenvolvendo solucoes que eliminam processos manuais, integram sistemas corporativos e geram ganho real de eficiencia.',
+        'about.p2': 'Especializado em integracao com <strong>SAP</strong>, desenvolvimento de <strong>APIs com FastAPI</strong> e automacao com <strong>BotCity</strong>. Venho explorando ativamente <strong>IA generativa</strong> — construindo agentes conversacionais com RAG usando Ollama local e integrando o Gemini AI em pipelines de processamento de dados.',
+        'about.p3': 'Formando em Ciencia da Computacao pela Unip (2021–2026), tenho como base uma mentalidade orientada a resultados: codigo limpo, manutivel e com impacto real nos negocios.',
+        'about.location': 'Belo Horizonte, MG — Brasil',
+        'about.age_suffix': ' anos',
+        'about.company': 'Patrimar Engenharia',
+        'about.edu': 'Bacharel em Ciencia da Computacao — Unip',
+        'about.lang_item': 'Ingles — <strong>Intermediario</strong>',
+        'about.gh.stats': 'GitHub Stats',
+        'about.gh.langs': 'Top Linguagens',
+        'skills.title': 'Habilidades <span class="accent">Tecnicas</span>',
+        'skills.cat.langs': 'Linguagens',
+        'skills.cat.rpa': 'RPA &amp; Automacao',
+        'skills.cat.ai': 'IA &amp; Machine Learning',
+        'skills.cat.apis': 'APIs &amp; Frameworks',
+        'skills.cat.tools': 'Ferramentas &amp; Infra',
+        'skills.ollama': 'Ollama (IA local)',
+        'skills.orchestration': 'Orquestracao',
+        'skills.agents': 'Agentes conversacionais',
+        'skills.networking': 'Redes / TCP-IP',
+        'exp.title': 'Experiencia <span class="accent">Profissional</span>',
+        'projects.title': 'Projetos <span class="accent">em Destaque</span>',
+        'projects.subtitle': 'Automacao, APIs e IA aplicada — solucoes com impacto real nos negocios.',
+        'proj1.title': 'Agente-Ollama <span class="tag" style="font-size:0.62rem;vertical-align:middle">IA Local</span>',
+        'proj1.desc': 'Agente conversacional com RAG usando Ollama. Indexa documentos (PDF, Word, Excel), gera embeddings e responde com contexto — 100% on-premise, sem nuvem.',
+        'proj2.title': 'Oracle CRM + Gemini AI',
+        'proj2.desc': 'Automacao que consome a API CRM da Oracle, processa dados incrementalmente e usa o Gemini AI para filtragem inteligente de spam e enriquecimento de cadastros.',
+        'proj3.title': 'Automacao de Indices Financeiros',
+        'proj3.desc': 'Sistema financeiro para gerenciar indices do mercado imobiliario (INCC, IGP-M) com web scraping, integracao SAP e relatorios automaticos no Power BI.',
+        'proj4.title': 'Gerador de Incorridos',
+        'proj4.desc': 'Pipeline completa: conexao SAP, extracao de dados de empreendimentos, relatorios Excel consolidados com indices INCC via integracao web. Fluxo 100% automatizado.',
+        'proj5.title': 'Sistema de Telemetria de Rede',
+        'proj5.desc': 'Coleta dados de hardware/software de todos os PCs da rede via API Flask, armazena em CSV e gera dashboards no Power BI. Deploy automatizado via GPO.',
+        'proj6.title': 'Automacao de Faturamento SAP',
+        'proj6.desc': 'Automacao completa do processo de faturamento no SAP: executa lancamentos, valida dados, gera relatorios e envia notificacoes de forma totalmente autonoma. Ativo em producao desde 2025.',
+        'proj7.title': 'Bot WhatsApp Massivo',
+        'proj7.desc': 'Le planilha Excel com contatos e dispara mensagens personalizadas com arquivos anexos de forma sequencial, com interface grafica de acompanhamento em tempo real.',
+        'proj8.title': 'Imobme Extract API',
+        'proj8.desc': 'API que automatiza a extracao de dados do sistema Imobme via RPA e os disponibiliza como endpoint HTTP — integrando o sistema legado com outras ferramentas via REST. Atualizado em Mai/2026.',
+        'repos.title': 'Repositorios <span class="accent">Recentes no GitHub</span>',
+        'repos.live': 'Atualizado automaticamente via GitHub API',
+        'repos.viewall': 'Ver todos os repositorios',
+        'edu.title': 'Formacao &amp; <span class="accent">Certificacoes</span>',
+        'edu.graduation': 'Graduacao',
+        'edu.certs': 'Certificacoes',
+        'contact.title': 'Vamos <span class="accent">Conversar?</span>',
+        'contact.subtitle': 'Aberto a novas oportunidades, projetos e colaboracoes.',
+        'footer.rights': 'Todos os direitos reservados.',
+        'gh.pub_repos': 'Repositórios públicos',
+        'gh.followers': 'Seguidores',
+        'gh.following': 'Seguindo',
+        'gh.nodesc': 'Sem descrição disponível.',
+        'gh.api_error': 'Não foi possível carregar via API.',
+        'gh.viewrepos': 'Ver repositórios no GitHub',
+        'gh.norepos': 'Nenhum repositório encontrado.',
+        'exp.load_error': 'Nao foi possivel carregar os dados. ',
+        'exp.load_link': 'Ver no LinkedIn',
+        'time.now': 'agora',
+        'time.min': ' min atrás',
+        'time.h': ' h atrás',
+        'time.d': ' d atrás',
+        'time.months': ' meses atrás',
+        'time.year': ' a atrás'
+      },
+      en: {
+        'nav.home': 'Home', 'nav.about': 'About', 'nav.skills': 'Skills',
+        'nav.experience': 'Experience', 'nav.projects': 'Projects',
+        'nav.education': 'Education', 'nav.contact': 'Contact',
+        'hero.badge': 'Available for new opportunities',
+        'hero.bio': 'Senior Developer at <strong>Grupo Patrimar</strong> focused on intelligent automation. I build Python solutions for RPA, APIs, and AI that eliminate manual processes, integrate corporate systems, and scale business operations.',
+        'hero.btn.projects': 'View Projects', 'hero.btn.contact': 'Contact',
+        'hero.stat.repos': 'Repositories', 'hero.stat.contribs': 'Contrib. 2025',
+        'hero.stat.devyears': 'Dev years', 'hero.stat.ityears': 'Years in IT',
+        'about.title': 'About <span class="accent">Me</span>',
+        'about.p1': 'I\'m a developer passionate about intelligent automation, with solid experience in <strong>Python, RPA, AI, and APIs</strong>. I work as a Senior Developer at <strong>Grupo Patrimar</strong>, building solutions that eliminate manual processes, integrate corporate systems, and generate real efficiency gains.',
+        'about.p2': 'Specialized in <strong>SAP</strong> integration, <strong>FastAPI</strong> development, and automation with <strong>BotCity</strong>. Actively exploring <strong>generative AI</strong> — building conversational agents with RAG using local Ollama and integrating Gemini AI into data processing pipelines.',
+        'about.p3': 'Computer Science student at Unip (2021–2026), with a results-oriented mindset: clean, maintainable code with real business impact.',
+        'about.location': 'Belo Horizonte, MG — Brazil',
+        'about.age_suffix': ' years old',
+        'about.company': 'Patrimar Engenharia',
+        'about.edu': 'Bachelor\'s in Computer Science — Unip',
+        'about.lang_item': 'English — <strong>Intermediate</strong>',
+        'about.gh.stats': 'GitHub Stats',
+        'about.gh.langs': 'Top Languages',
+        'skills.title': 'Technical <span class="accent">Skills</span>',
+        'skills.cat.langs': 'Languages',
+        'skills.cat.rpa': 'RPA &amp; Automation',
+        'skills.cat.ai': 'AI &amp; Machine Learning',
+        'skills.cat.apis': 'APIs &amp; Frameworks',
+        'skills.cat.tools': 'Tools &amp; Infrastructure',
+        'skills.ollama': 'Ollama (local AI)',
+        'skills.orchestration': 'Orchestration',
+        'skills.agents': 'Conversational Agents',
+        'skills.networking': 'Networking / TCP-IP',
+        'exp.title': 'Professional <span class="accent">Experience</span>',
+        'projects.title': 'Featured <span class="accent">Projects</span>',
+        'projects.subtitle': 'Automation, APIs, and applied AI — solutions with real business impact.',
+        'proj1.title': 'Agente-Ollama <span class="tag" style="font-size:0.62rem;vertical-align:middle">Local AI</span>',
+        'proj1.desc': 'Conversational agent with RAG using Ollama. Indexes documents (PDF, Word, Excel), generates embeddings and responds with context — 100% on-premise, no cloud.',
+        'proj2.title': 'Oracle CRM + Gemini AI',
+        'proj2.desc': 'Automation consuming Oracle CRM API, processing data incrementally and using Gemini AI for intelligent spam filtering and customer data enrichment.',
+        'proj3.title': 'Financial Index Automation',
+        'proj3.desc': 'Financial system to manage real estate market indexes (INCC, IGP-M) with web scraping, SAP integration, and automated Power BI reports.',
+        'proj4.title': 'Incurred Costs Generator',
+        'proj4.desc': 'Full pipeline: SAP connection, property data extraction, consolidated Excel reports with INCC indexes via web integration. 100% automated workflow.',
+        'proj5.title': 'Network Telemetry System',
+        'proj5.desc': 'Collects hardware/software data from all network PCs via Flask API, stores in CSV, and generates Power BI dashboards. Automated deployment via GPO.',
+        'proj6.title': 'SAP Billing Automation',
+        'proj6.desc': 'Full automation of SAP billing process: executes postings, validates data, generates reports, and sends notifications autonomously. Live in production since 2025.',
+        'proj7.title': 'Mass WhatsApp Bot',
+        'proj7.desc': 'Reads Excel spreadsheet with contacts and sends personalized messages with attachments sequentially, with a real-time GUI monitoring interface.',
+        'proj8.title': 'Imobme Extract API',
+        'proj8.desc': 'API automating data extraction from the Imobme system via RPA, exposing it as an HTTP endpoint — integrating the legacy system with modern tools via REST. Updated May/2026.',
+        'repos.title': 'Recent <span class="accent">GitHub Repositories</span>',
+        'repos.live': 'Automatically updated via GitHub API',
+        'repos.viewall': 'View all repositories',
+        'edu.title': 'Education &amp; <span class="accent">Certifications</span>',
+        'edu.graduation': 'Education',
+        'edu.certs': 'Certifications',
+        'contact.title': 'Let\'s <span class="accent">Talk?</span>',
+        'contact.subtitle': 'Open to new opportunities, projects, and collaborations.',
+        'footer.rights': 'All rights reserved.',
+        'gh.pub_repos': 'Public repositories',
+        'gh.followers': 'Followers',
+        'gh.following': 'Following',
+        'gh.nodesc': 'No description available.',
+        'gh.api_error': 'Could not load via API.',
+        'gh.viewrepos': 'View repositories on GitHub',
+        'gh.norepos': 'No repositories found.',
+        'exp.load_error': 'Could not load data. ',
+        'exp.load_link': 'View on LinkedIn',
+        'time.now': 'just now',
+        'time.min': ' min ago',
+        'time.h': ' h ago',
+        'time.d': ' d ago',
+        'time.months': ' months ago',
+        'time.year': ' yr ago'
+      }
+    }
+  };
+
+  var currentLang = localStorage.getItem('portfolio-lang') || 'pt';
+
+  function t(key) {
+    return (I18N.strings[currentLang] && I18N.strings[currentLang][key] !== undefined)
+      ? I18N.strings[currentLang][key]
+      : (I18N.strings.pt[key] || key);
+  }
+
+  if (currentLang !== 'pt') {
+    var _s = I18N.strings[currentLang] || {};
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var v = _s[el.getAttribute('data-i18n')]; if (v !== undefined) el.textContent = v;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var v = _s[el.getAttribute('data-i18n-html')]; if (v !== undefined) el.innerHTML = v;
+    });
+    document.documentElement.setAttribute('lang', 'en');
+    var _ll = document.getElementById('langLabel'); if (_ll) _ll.textContent = 'PT';
+  }
+
+  /* ----------------------------------------------------------
      THEME MANAGEMENT
   ---------------------------------------------------------- */
   const html = document.documentElement;
@@ -31,6 +225,81 @@
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  /* ----------------------------------------------------------
+     DOWNLOAD CV — gera PDF automaticamente via html2pdf.js
+  ---------------------------------------------------------- */
+  function generateCV(srcFile, filename, triggerEl) {
+    if (triggerEl) {
+      triggerEl.disabled = true;
+      triggerEl._origHTML = triggerEl.innerHTML;
+      triggerEl.innerHTML = triggerEl.tagName === 'BUTTON'
+        ? '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Gerando...'
+        : 'Gerando...';
+    }
+
+    function restore() {
+      if (triggerEl) { triggerEl.disabled = false; triggerEl.innerHTML = triggerEl._origHTML; }
+    }
+
+    fetch(srcFile)
+      .then(function (r) { return r.text(); })
+      .then(function (rawHtml) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(rawHtml, 'text/html');
+        var cvRoot = doc.querySelector('.cv-root');
+        if (!cvRoot) { restore(); return; }
+
+        var styleContent = Array.from(doc.querySelectorAll('style'))
+          .map(function (s) { return s.textContent; }).join('');
+
+        var wrap = document.createElement('div');
+        wrap.style.cssText = 'position:fixed;left:-9999px;top:0;width:794px;background:#fff;z-index:-1;';
+        var styleEl = document.createElement('style');
+        styleEl.textContent = styleContent;
+        wrap.appendChild(styleEl);
+        wrap.appendChild(cvRoot);
+        document.body.appendChild(wrap);
+
+        html2pdf().set({
+          margin: 0,
+          filename: filename,
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        }).from(cvRoot).save()
+          .then(function () { document.body.removeChild(wrap); restore(); })
+          .catch(function () { if (wrap.parentNode) document.body.removeChild(wrap); restore(); });
+      })
+      .catch(function () { restore(); });
+  }
+
+  var btnPrintCV = document.getElementById('btnPrintCV');
+  if (btnPrintCV) {
+    btnPrintCV.addEventListener('click', function () {
+      if (currentLang === 'en') {
+        generateCV('curriculo-en.html', 'Renan_Oliveira_Resume.pdf', btnPrintCV);
+      } else {
+        generateCV('curriculo.html', 'Renan_Oliveira_Curriculo.pdf', btnPrintCV);
+      }
+    });
+  }
+
+  var btnDownloadCVContact = document.getElementById('btnDownloadCVContact');
+  if (btnDownloadCVContact) {
+    btnDownloadCVContact.addEventListener('click', function (e) {
+      e.preventDefault();
+      generateCV('curriculo.html', 'Renan_Oliveira_Curriculo.pdf', btnDownloadCVContact);
+    });
+  }
+
+  var btnDownloadCVContactEn = document.getElementById('btnDownloadCVContactEn');
+  if (btnDownloadCVContactEn) {
+    btnDownloadCVContactEn.addEventListener('click', function (e) {
+      e.preventDefault();
+      generateCV('curriculo-en.html', 'Renan_Oliveira_Resume.pdf', btnDownloadCVContactEn);
     });
   }
 
@@ -125,14 +394,7 @@
      TYPEWRITER EFFECT
   ---------------------------------------------------------- */
   var typewriterEl = document.getElementById('typewriter');
-  var phrases = [
-    'Desenvolvedor Python & RPA',
-    'Desenvolvedor Python',
-    'Especialista em RPA',
-    'Automação SAP & APIs',
-    'IA com Ollama & Gemini',
-    'Desenvolvedor Backend',
-  ];
+  var phrases = I18N.phrases[currentLang] || I18N.phrases.pt;
 
   if (typewriterEl) {
     var phraseIdx = 0;
@@ -215,7 +477,7 @@
      GITHUB API INTEGRATION
   ---------------------------------------------------------- */
   var GITHUB_USER = 'RenanMGX';
-  var CACHE_KEY = 'gh_repos_v2';
+  var CACHE_KEY = 'gh_repos_v3';
   var CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
   var LANG_COLORS = {
@@ -241,12 +503,12 @@
     var date = new Date(dateStr);
     var now = new Date();
     var diff = Math.floor((now - date) / 1000);
-    if (diff < 60) return 'agora';
-    if (diff < 3600) return Math.floor(diff / 60) + 'min atrás';
-    if (diff < 86400) return Math.floor(diff / 3600) + 'h atrás';
-    if (diff < 2592000) return Math.floor(diff / 86400) + 'd atrás';
-    if (diff < 31536000) return Math.floor(diff / 2592000) + 'meses atrás';
-    return Math.floor(diff / 31536000) + 'a atrás';
+    if (diff < 60) return t('time.now');
+    if (diff < 3600) return Math.floor(diff / 60) + t('time.min');
+    if (diff < 86400) return Math.floor(diff / 3600) + t('time.h');
+    if (diff < 2592000) return Math.floor(diff / 86400) + t('time.d');
+    if (diff < 31536000) return Math.floor(diff / 2592000) + t('time.months');
+    return Math.floor(diff / 31536000) + t('time.year');
   }
 
   function escapeHtml(str) {
@@ -271,14 +533,14 @@
 
     if (filtered.length === 0) {
       grid.innerHTML =
-        '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:24px">Nenhum repositório encontrado.</p>';
+        '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:24px">' + t('gh.norepos') + '</p>';
       return;
     }
 
     grid.innerHTML = filtered
       .map(function (repo) {
         var langColor = getLangColor(repo.language);
-        var safeDesc = escapeHtml(repo.description) || 'Sem descrição disponível.';
+        var safeDesc = escapeHtml(repo.description) || t('gh.nodesc');
         var safeName = escapeHtml(repo.name);
 
         return (
@@ -311,7 +573,7 @@
     grid.innerHTML =
       '<div style="grid-column:1/-1;text-align:center;padding:36px;color:var(--text-muted)">' +
       '<i class="fab fa-github" style="font-size:2.2rem;display:block;margin-bottom:12px"></i>' +
-      '<p style="font-size:0.875rem">Não foi possível carregar via API. <a href="https://github.com/RenanMGX?tab=repositories" target="_blank" rel="noopener">Ver repositórios no GitHub</a></p>' +
+      '<p style="font-size:0.875rem">' + t('gh.api_error') + ' <a href="https://github.com/RenanMGX?tab=repositories" target="_blank" rel="noopener">' + t('gh.viewrepos') + '</a></p>' +
       '</div>';
   }
 
@@ -373,9 +635,9 @@
     var ghStatsBody = document.getElementById('ghStatsBody');
     if (ghStatsBody && data.public_repos !== undefined) {
       ghStatsBody.innerHTML =
-        '<div class="gh-stat-row"><i class="fas fa-book" aria-hidden="true"></i><span class="gh-stat-label">Repositórios públicos</span><span class="gh-stat-val">' + data.public_repos + '</span></div>' +
-        '<div class="gh-stat-row"><i class="fas fa-users" aria-hidden="true"></i><span class="gh-stat-label">Seguidores</span><span class="gh-stat-val">' + data.followers + '</span></div>' +
-        '<div class="gh-stat-row"><i class="fas fa-user-plus" aria-hidden="true"></i><span class="gh-stat-label">Seguindo</span><span class="gh-stat-val">' + data.following + '</span></div>';
+        '<div class="gh-stat-row"><i class="fas fa-book" aria-hidden="true"></i><span class="gh-stat-label">' + t('gh.pub_repos') + '</span><span class="gh-stat-val">' + data.public_repos + '</span></div>' +
+        '<div class="gh-stat-row"><i class="fas fa-users" aria-hidden="true"></i><span class="gh-stat-label">' + t('gh.followers') + '</span><span class="gh-stat-val">' + data.followers + '</span></div>' +
+        '<div class="gh-stat-row"><i class="fas fa-user-plus" aria-hidden="true"></i><span class="gh-stat-label">' + t('gh.following') + '</span><span class="gh-stat-val">' + data.following + '</span></div>';
     }
   }
 
@@ -449,8 +711,9 @@
      → clique em data.json → lapis → edite → Commit changes
   ---------------------------------------------------------- */
   var DATA_URL = './data.json';
-  var CV_CACHE_KEY = 'cv_data_v2';
+  var CV_CACHE_KEY = 'cv_data_v3';
   var CV_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 horas
+  var cvDataCache = null; // dados em memoria para re-render ao trocar idioma
 
   function renderExperience(items) {
     var container = document.getElementById('expTimeline');
@@ -461,10 +724,14 @@
         return '<span class="tag">' + escapeHtml(t) + '</span>';
       }).join('');
 
+      var expTitle = (currentLang === 'en' && exp.title_en) ? exp.title_en : exp.title;
+      var expPeriod = (currentLang === 'en' && exp.period_en) ? exp.period_en : exp.period;
+      var expDesc = (currentLang === 'en' && exp.description_en) ? exp.description_en : exp.description;
+      var expHighlights = (currentLang === 'en' && exp.highlights_en) ? exp.highlights_en : (exp.highlights || []);
       var highlights = '';
-      if (exp.highlights && exp.highlights.length) {
+      if (expHighlights.length) {
         highlights = '<ul class="exp-highlights">' +
-          exp.highlights.map(function (h) {
+          expHighlights.map(function (h) {
             return '<li>' + escapeHtml(h) + '</li>';
           }).join('') +
           '</ul>';
@@ -475,11 +742,11 @@
         '<div class="exp-dot" aria-hidden="true"></div>' +
         '<div class="exp-card">' +
         '<div class="exp-header"><div>' +
-        '<h3 class="exp-title">' + escapeHtml(exp.title) + '</h3>' +
+        '<h3 class="exp-title">' + escapeHtml(expTitle) + '</h3>' +
         '<span class="exp-company">' + escapeHtml(exp.company) + '</span>' +
-        '</div><span class="exp-period">' + escapeHtml(exp.period) + '</span></div>' +
+        '</div><span class="exp-period">' + escapeHtml(expPeriod) + '</span></div>' +
         (tags ? '<div class="exp-tags">' + tags + '</div>' : '') +
-        '<p class="exp-desc">' + escapeHtml(exp.description) + '</p>' +
+        '<p class="exp-desc">' + escapeHtml(expDesc) + '</p>' +
         highlights +
         '</div></div>'
       );
@@ -492,13 +759,16 @@
 
     container.innerHTML = items.map(function (edu) {
       var iconClass = escapeHtml(edu.icon_class || 'fas fa-graduation-cap');
+      var eduDegree = (currentLang === 'en' && edu.degree_en) ? edu.degree_en : edu.degree;
+      var eduPeriod = (currentLang === 'en' && edu.period_en) ? edu.period_en : edu.period;
+      var eduDesc = (currentLang === 'en' && edu.description_en) ? edu.description_en : edu.description;
       return (
         '<div class="edu-main-icon" aria-hidden="true"><i class="' + iconClass + '"></i></div>' +
         '<div>' +
-        '<h4>' + escapeHtml(edu.degree) + '</h4>' +
+        '<h4>' + escapeHtml(eduDegree) + '</h4>' +
         '<span class="edu-institution">' + escapeHtml(edu.institution) + '</span>' +
-        '<span class="edu-period">' + escapeHtml(edu.period) + '</span>' +
-        (edu.description ? '<p class="edu-desc">' + escapeHtml(edu.description) + '</p>' : '') +
+        '<span class="edu-period">' + escapeHtml(eduPeriod) + '</span>' +
+        (eduDesc ? '<p class="edu-desc">' + escapeHtml(eduDesc) + '</p>' : '') +
         '</div>'
       );
     }).join('');
@@ -510,13 +780,15 @@
 
     container.innerHTML = items.map(function (cert) {
       var iconStyle = cert.icon_style ? ' style="' + escapeHtml(cert.icon_style) + '"' : '';
+      var certName = (currentLang === 'en' && cert.name_en) ? cert.name_en : cert.name;
+      var certDate = (currentLang === 'en' && cert.date_en) ? cert.date_en : cert.date;
       return (
         '<a href="' + escapeHtml(cert.url) + '" target="_blank" rel="noopener noreferrer" class="cert-card">' +
         '<div class="cert-icon"><i class="' + escapeHtml(cert.icon_class) + '"' + iconStyle + ' aria-hidden="true"></i></div>' +
         '<div class="cert-info">' +
-        '<span class="cert-name">' + escapeHtml(cert.name) + '</span>' +
+        '<span class="cert-name">' + escapeHtml(certName) + '</span>' +
         '<span class="cert-issuer">' + escapeHtml(cert.issuer) + '</span>' +
-        '<span class="cert-date">' + escapeHtml(cert.date) + '</span>' +
+        '<span class="cert-date">' + escapeHtml(certDate) + '</span>' +
         '</div>' +
         '<i class="fas fa-external-link-alt cert-ext-icon" aria-hidden="true"></i>' +
         '</a>'
@@ -525,6 +797,7 @@
   }
 
   function applyCurriculumData(data) {
+    cvDataCache = data;
     renderExperience(data.experience);
     renderEducation(data.education);
     renderCertifications(data.certifications);
@@ -556,11 +829,43 @@
         if (expEl) {
           expEl.innerHTML =
             '<p style="color:var(--text-muted);padding:24px;text-align:center">' +
-            'Nao foi possivel carregar os dados. ' +
-            '<a href="https://www.linkedin.com/in/renanmgx/" target="_blank" rel="noopener">Ver no LinkedIn</a>' +
+            t('exp.load_error') +
+            '<a href="https://www.linkedin.com/in/renanmgx/" target="_blank" rel="noopener">' + t('exp.load_link') + '</a>' +
             '</p>';
         }
       });
+  }
+
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('portfolio-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'pt-br');
+    var langLabel = document.getElementById('langLabel');
+    if (langLabel) langLabel.textContent = lang === 'en' ? 'PT' : 'EN';
+    var strings = I18N.strings[lang] || I18N.strings.pt;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var v = strings[el.getAttribute('data-i18n')]; if (v !== undefined) el.textContent = v;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var v = strings[el.getAttribute('data-i18n-html')]; if (v !== undefined) el.innerHTML = v;
+    });
+    if (cvDataCache) {
+      applyCurriculumData(cvDataCache);
+    } else {
+      fetchCurriculumData();
+    }
+    try { var profRaw = localStorage.getItem(PROFILE_CACHE_KEY); if (profRaw) { var profObj = JSON.parse(profRaw); if (profObj && profObj.data) applyProfileData(profObj.data); } } catch (e) {}
+    try { var reposRaw = localStorage.getItem(CACHE_KEY); if (reposRaw) { var rObj = JSON.parse(reposRaw); if (rObj && Date.now() - rObj.ts < CACHE_TTL) { renderRepos(rObj.data); renderLangStats(rObj.data); } } } catch (e) {}
+    phrases = I18N.phrases[lang] || I18N.phrases.pt;
+    phraseIdx = 0; charIdx = 0; deleting = false;
+    if (typewriterEl) typewriterEl.textContent = '';
+  }
+
+  var langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      applyLang(currentLang === 'pt' ? 'en' : 'pt');
+    });
   }
 
   fetchCurriculumData();

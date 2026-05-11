@@ -239,6 +239,30 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--accent-dim);
 }
 
+.lang-toggle {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    transition: var(--transition);
+}
+
+.lang-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -1071,6 +1095,7 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1307,9 +1332,9 @@ h1, h2, h3, h4, h5, h6 {
    ============================================================ */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 20px;
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -1355,6 +1380,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-card a:hover { color: var(--accent); opacity: 1; }
+
+.cv-dl-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.cv-dl-links a {
+    display: inline;
+    word-break: normal;
+    font-size: 0.82rem;
+}
 
 /* ============================================================
    FOOTER
@@ -1556,4 +1595,91 @@ h1, h2, h3, h4, h5, h6 {
     .container { padding: 0 16px; }
     .hero-stats { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PRINT — Impressao / Download PDF
+   ============================================================ */
+@media print {
+    /* Ocultar elementos interativos e decorativos */
+    .navbar,
+    .hero-scroll-hint,
+    .back-to-top,
+    .hero-bg-grid,
+    .photo-ring,
+    .hero-actions,
+    .hero-socials,
+    .github-repos-section,
+    .no-print { display: none !important; }
+
+    /* Reset de cores para impressao */
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    html, body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-size: 13px;
+    }
+
+    /* Sections mais compactos */
+    .section { padding: 28px 0 !important; }
+    .section-alt { background: #f8f8f8 !important; }
+    .section-header { margin-bottom: 24px !important; }
+
+    /* Hero compacto */
+    .hero-section {
+        min-height: auto !important;
+        padding: 24px 0 28px !important;
+    }
+    .hero-container { gap: 32px; }
+    .hero-photo { width: 120px !important; height: 120px !important; }
+    .hero-photo-wrapper { width: 120px !important; height: 120px !important; }
+    .hero-visual { gap: 16px; }
+    .hero-stats {
+        grid-template-columns: repeat(4, 1fr) !important;
+        max-width: 100% !important;
+    }
+    .stat-card {
+        background: #f0f0f0 !important;
+        border-color: #cccccc !important;
+    }
+
+    /* Cards e bordas */
+    .exp-card,
+    .project-card,
+    .skill-category,
+    .cert-card,
+    .edu-main-card,
+    .contact-card,
+    .gh-native-card {
+        background: #f9f9f9 !important;
+        border-color: #cccccc !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .skill-badge {
+        background: #f0f0f0 !important;
+        border-color: #cccccc !important;
+    }
+
+    /* Garantir quebra de pagina em secoes longas */
+    .section { page-break-inside: avoid; }
+    .exp-item { page-break-inside: avoid; }
+    .project-card { page-break-inside: avoid; }
+
+    /* Accent color para print (verde mais escuro para contraste) */
+    .accent,
+    .exp-company,
+    .edu-institution,
+    .repo-card-name { color: #007a5a !important; }
+
+    .section-line { background: #007a5a !important; }
+    .exp-dot { background: #007a5a !important; }
+
+    /* Timeline line */
+    .exp-timeline::before { background: #cccccc !important; }
+
+    /* Footer */
+    .footer { background: #f0f0f0 !important; border-top-color: #cccccc !important; }
 }
