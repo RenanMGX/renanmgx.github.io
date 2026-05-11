@@ -878,28 +878,32 @@
     shareBtn.addEventListener('click', function () {
       var url = 'https://renanmgx.github.io/';
       var title = 'Renan Oliveira — Portfolio';
-      var text = currentLang === 'en'
-        ? 'Check out my portfolio: Python, RPA, AI and APIs developer.'
-        : 'Veja meu portfolio: desenvolvedor Python, RPA, IA e APIs.';
 
-      if (navigator.share) {
-        navigator.share({ title: title, text: text, url: url }).catch(function () {});
-      } else {
-        var fallback = function () {
+      var copyFallback = function () {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url)
+            .then(showShareToast)
+            .catch(function () { showShareToast(); });
+        } else {
           var el = document.createElement('textarea');
           el.value = url;
           el.style.cssText = 'position:fixed;left:-9999px;top:0';
           document.body.appendChild(el);
           el.select();
-          document.execCommand('copy');
+          try { document.execCommand('copy'); } catch (e) {}
           document.body.removeChild(el);
           showShareToast();
-        };
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(url).then(showShareToast).catch(fallback);
-        } else {
-          fallback();
         }
+      };
+
+      if (navigator.share) {
+        navigator.share({ url: url, title: title }).catch(function (err) {
+          if (!err || err.name !== 'AbortError') {
+            copyFallback();
+          }
+        });
+      } else {
+        copyFallback();
       }
     });
   }

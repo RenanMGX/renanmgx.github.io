@@ -1593,6 +1593,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .hamburger { display: flex; }
     .logo-text { display: none; }
+    .nav-actions { gap: 4px; }
 
     /* Hero mobile */
     .hero-container {
