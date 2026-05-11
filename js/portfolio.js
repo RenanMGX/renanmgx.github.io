@@ -101,7 +101,8 @@
         'time.h': ' h atrás',
         'time.d': ' d atrás',
         'time.months': ' meses atrás',
-        'time.year': ' a atrás'
+        'time.year': ' a atrás',
+        'share.copied': 'Link copiado! ✅'
       },
       en: {
         'nav.home': 'Home', 'nav.about': 'About', 'nav.skills': 'Skills',
@@ -175,7 +176,8 @@
         'time.h': ' h ago',
         'time.d': ' d ago',
         'time.months': ' months ago',
-        'time.year': ' yr ago'
+        'time.year': ' yr ago',
+        'share.copied': 'Link copied! ✅'
       }
     }
   };
@@ -866,6 +868,54 @@
     langToggle.addEventListener('click', function () {
       applyLang(currentLang === 'pt' ? 'en' : 'pt');
     });
+  }
+
+  /* ----------------------------------------------------------
+     SHARE BUTTON
+  ---------------------------------------------------------- */
+  var shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', function () {
+      var url = 'https://renanmgx.github.io/';
+      var title = 'Renan Oliveira — Portfolio';
+      var text = currentLang === 'en'
+        ? 'Check out my portfolio: Python, RPA, AI and APIs developer.'
+        : 'Veja meu portfolio: desenvolvedor Python, RPA, IA e APIs.';
+
+      if (navigator.share) {
+        navigator.share({ title: title, text: text, url: url }).catch(function () {});
+      } else {
+        var fallback = function () {
+          var el = document.createElement('textarea');
+          el.value = url;
+          el.style.cssText = 'position:fixed;left:-9999px;top:0';
+          document.body.appendChild(el);
+          el.select();
+          document.execCommand('copy');
+          document.body.removeChild(el);
+          showShareToast();
+        };
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(showShareToast).catch(fallback);
+        } else {
+          fallback();
+        }
+      }
+    });
+  }
+
+  function showShareToast() {
+    var existing = document.querySelector('.share-toast');
+    if (existing) document.body.removeChild(existing);
+    var toast = document.createElement('div');
+    toast.className = 'share-toast';
+    toast.textContent = t('share.copied');
+    document.body.appendChild(toast);
+    setTimeout(function () { toast.classList.add('visible'); }, 10);
+    setTimeout(function () {
+      toast.classList.remove('visible');
+      setTimeout(function () { if (toast.parentNode) document.body.removeChild(toast); }, 300);
+    }, 2200);
   }
 
   fetchCurriculumData();
